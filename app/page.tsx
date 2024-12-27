@@ -8,6 +8,7 @@ const Home = () => {
   return (
     <>
       <Navbar/>
+      <div>Hello</div>
       <div className="flex justify-center">
         <Image src={apexenggtechLogo} alt="Holder Image" className="w-full "/>
       </div>
