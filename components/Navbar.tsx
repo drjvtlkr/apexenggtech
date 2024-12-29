@@ -1,12 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Navbar = () => {
   return (
-    <nav className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl flex justify-center p-5">
-      Apex Engineering Technology <br /> 
-      We are a work in progress... 🚀
+    <nav className="text-lg sm:text-xl md:text-2xl lg:text-lg flex justify-center p-5 text-center text-red-500 w-full">
+      <div className="">
+        Apex Engineering Technology
+        We are a work in progress... 🚀
+      </div>
     </nav>
-  )
-}
+  );
+};
 
 export default Navbar;
