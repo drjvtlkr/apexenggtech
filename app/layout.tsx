@@ -9,8 +9,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Apex Engineering Technology",
-  description: "One stop Solution",
+  title: "Abhishek Engineering Works",
+  description: "One stop Solution, for your sugarcane industry",
 };
 
 export default function RootLayout({

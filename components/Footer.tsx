@@ -16,7 +16,7 @@ const Footer = () => {
           ©{currentYear}
           <Link href="#" className="hover:underline">
             {" "}
-            Apex Engineering Technology™
+            Abhishek Engineering Works
           </Link>
           . All Rights Reserved.
         </span>
