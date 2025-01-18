@@ -8,33 +8,33 @@ import image2 from "../images/ffeFinProcess.jpg";
 import image3 from "../images/continuousVacuumPan.jpg";
 
 export default function Carousel() {
-  const carouselRef = useRef(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    let carousel: any = null;
-    
+    // Define carousel type
+    type BootstrapCarousel = {
+      dispose: () => void;
+    };
+
+    let carousel: BootstrapCarousel | null = null;
+
     const initCarousel = async () => {
       try {
-        // Import Bootstrap
-        const bootstrap = await import('bootstrap/dist/js/bootstrap.bundle.min.js');
-        
-        // Initialize carousel only after Bootstrap is loaded
+        const bootstrap = await import("bootstrap/dist/js/bootstrap.bundle.min.js");
         if (carouselRef.current && bootstrap.Carousel) {
           carousel = new bootstrap.Carousel(carouselRef.current, {
             interval: 3000,
-            ride: true,
-            touch: true
+            ride: "carousel",
+            touch: true,
           });
         }
       } catch (error) {
-        console.error('Error initializing carousel:', error);
+        console.error("Error initializing carousel:", error);
       }
     };
 
-    // Initialize
     initCarousel();
 
-    // Cleanup
     return () => {
       if (carousel) {
         carousel.dispose();
@@ -64,14 +64,12 @@ export default function Carousel() {
       className="carousel slide carousel-fade relative overflow-hidden"
       data-bs-ride="carousel"
     >
-      {/* Carousel Items */}
       <div className="carousel-inner h-screen">
         {images.map((image, idx) => (
           <div
             key={idx}
             className={`carousel-item h-full ${idx === 0 ? "active" : ""}`}
           >
-            {/* Image Container with Animation */}
             <div className="relative h-full w-full animate-zoom-in">
               <Image
                 src={image.src}
@@ -80,11 +78,9 @@ export default function Carousel() {
                 fill
                 priority
               />
-              {/* Gradient Overlay */}
               <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
             </div>
 
-            {/* Text Container with Animation */}
             <div className="absolute inset-0 flex items-center justify-start px-16">
               <div className="w-1/2 animate-slide-down">
                 <h1 className="text-4xl font-bold text-white md:text-6xl">
@@ -96,7 +92,6 @@ export default function Carousel() {
         ))}
       </div>
 
-      {/* Carousel Controls */}
       <button
         className="carousel-control-prev"
         type="button"
@@ -116,7 +111,6 @@ export default function Carousel() {
         <span className="visually-hidden">Next</span>
       </button>
 
-      {/* Add indicators for better control */}
       <div className="carousel-indicators">
         {images.map((_, idx) => (
           <button
