@@ -11,12 +11,7 @@ export default function Carousel() {
   const carouselRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    // Define carousel type
-    type BootstrapCarousel = {
-      dispose: () => void;
-    };
-
-    let carousel: BootstrapCarousel | null = null;
+    let carousel: { dispose: () => void } | null = null;
 
     const initCarousel = async () => {
       try {
