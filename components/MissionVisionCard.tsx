@@ -5,7 +5,13 @@ import Image from "next/image";
 import image3 from "../images/continuousVacuumPan.jpg";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
 
-const MissionVisionCard = ({ title, description, imageUrl, link }: any) => {
+interface MissionVisionCardProps {
+  title: string;
+  description: string;
+  link: string;
+}
+
+const MissionVisionCard = ({ title, description, link }: MissionVisionCardProps) => {
   return (
     <CardContainer>
       <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
