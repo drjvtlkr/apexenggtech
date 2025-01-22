@@ -8,6 +8,7 @@ import Image from "next/image";
 import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
+import { CustomerJourney } from "@/components/CustomerJourney";
 const Home = () => {
   return (
     <>
@@ -58,9 +59,9 @@ const Home = () => {
             <MissionVisionCard
               title="Our Mission"
               description="At our core, we provide innovative engineering solutions designed to elevate our client’s 
-success. We are committed to upholding the highest standards of quality and trust. Our work is 
-driven by a passion for quality and excellence. Together, we craft the future of engineering 
-excellence. "
+              success. We are committed to upholding the highest standards of quality and trust. Our work is 
+              driven by a passion for quality and excellence. Together, we craft the future of engineering 
+              excellence. "
               image={imagemission}
             />
 
@@ -68,8 +69,8 @@ excellence. "
             <MissionVisionCard
               title="Our Vision"
               description="We aim to lead with integrity and innovation, delivering top-tier engineering solutions. Our 
-vision is to set the standard in the industry, ensuring client success and lasting partnerships. 
-Excellence in Quality is our commitment, always. "
+              vision is to set the standard in the industry, ensuring client success and lasting partnerships. 
+              Excellence in Quality is our commitment, always. "
               image={imageVision}
             />
           </div>
@@ -77,9 +78,15 @@ Excellence in Quality is our commitment, always. "
 
         {/* Products */}
         <div>
-      <h1 className="text-5xl font-bold text-center mb-6">Our Products</h1>
-      <ProductCarousel />
-    </div>
+          <h1 className="text-5xl font-bold text-center mb-6">Our Products</h1>
+          <ProductCarousel />
+        </div>
+
+        {/* Customer Journey */}
+        <div className="py-10 mt-3">
+          {/* <h1 className="text-5xl font-bold text-center mb-6">Customer Journey</h1> */}
+          <CustomerJourney />
+        </div>
 
       </div>
     </>
