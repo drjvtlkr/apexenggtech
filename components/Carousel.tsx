@@ -1,42 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import image1 from "../images/intermediateRakeTypeCarriers.jpg";
 import image2 from "../images/ffeFinProcess.jpg";
 import image3 from "../images/continuousVacuumPan.jpg";
 
-export default function Carousel() {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    let carousel: { dispose: () => void } | null = null;
-
-    const initCarousel = async () => {
-      try {
-        const bootstrap = await import("bootstrap/dist/js/bootstrap.bundle.min.js");
-        if (carouselRef.current && bootstrap.Carousel) {
-          carousel = new bootstrap.Carousel(carouselRef.current, {
-            interval: 3000,
-            ride: "carousel",
-            touch: true,
-          });
-        }
-      } catch (error) {
-        console.error("Error initializing carousel:", error);
-      }
-    };
-
-    initCarousel();
-
-    return () => {
-      if (carousel) {
-        carousel.dispose();
-      }
-    };
-  }, []);
-
+const Carousel = () => {
   const images = [
     {
       src: image1,
@@ -52,84 +22,90 @@ export default function Carousel() {
     },
   ];
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Change slide every 3 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval); // Cleanup on unmount
+  }, [images.length]);
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+  };
+
   return (
-    <div
-      id="carouselExampleFade"
-      ref={carouselRef}
-      className="carousel slide carousel-fade relative overflow-hidden"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-inner h-screen">
+    <div className="relative w-full h-screen overflow-hidden">
+      {/* Images */}
+      <div className="relative h-full">
         {images.map((image, idx) => (
           <div
             key={idx}
-            className={`carousel-item h-full ${idx === 0 ? "active" : ""}`}
+            className={`absolute inset-0 transition-opacity duration-700 ${
+              idx === currentIndex ? "opacity-100" : "opacity-0"
+            }`}
           >
-            <div className="relative h-full w-full animate-zoom-in">
-              <Image
-                src={image.src}
-                alt={`Slide ${idx + 1}`}
-                className="d-block w-full object-cover"
-                fill
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
-            </div>
-
-            <div className="absolute inset-0 flex items-center justify-start px-16">
-              <div className="w-1/2 animate-slide-down">
-                <h1 className="text-4xl font-bold text-white md:text-6xl">
-                  {image.text}
-                </h1>
-              </div>
-            </div>
+            <Image
+              src={image.src}
+              alt={image.text}
+              fill
+              className="object-cover"
+              priority={idx === currentIndex}
+              loading={idx === currentIndex ? "eager" : "lazy"}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70"></div>
           </div>
         ))}
       </div>
 
+      {/* Text */}
+      <div className="absolute inset-0 flex items-center justify-start px-16">
+        <div className="w-1/2">
+          <h1 className="text-4xl font-bold text-white md:text-6xl animate-slide-down">
+            {images[currentIndex].text}
+          </h1>
+        </div>
+      </div>
+
+      {/* Navigation Buttons */}
       <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev"
+        onClick={handlePrev}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50"
+        aria-label="Previous Slide"
       >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="visually-hidden">Previous</span>
+        &lt;
       </button>
       <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="next"
+        onClick={handleNext}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/30 text-white p-3 rounded-full hover:bg-black/50"
+        aria-label="Next Slide"
       >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="visually-hidden">Next</span>
+        &gt;
       </button>
 
-      <div className="carousel-indicators">
+      {/* Indicators */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, idx) => (
           <button
             key={idx}
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide-to={idx}
-            className={idx === 0 ? "active" : ""}
-            aria-current={idx === 0 ? "true" : undefined}
-            aria-label={`Slide ${idx + 1}`}
+            onClick={() => setCurrentIndex(idx)}
+            className={`w-3 h-3 rounded-full ${
+              idx === currentIndex ? "bg-white" : "bg-gray-500"
+            }`}
+            aria-label={`Go to slide ${idx + 1}`}
           />
         ))}
       </div>
 
-      <style jsx global>{`
-        @keyframes zoomIn {
-          from {
-            transform: scale(1.2);
-          }
-          to {
-            transform: scale(1);
-          }
-        }
-
+      <style jsx>{`
         @keyframes slideDown {
           from {
             opacity: 0;
@@ -141,32 +117,12 @@ export default function Carousel() {
           }
         }
 
-        .animate-zoom-in {
-          animation: zoomIn 1s ease-out forwards;
-        }
-
         .animate-slide-down {
           animation: slideDown 0.8s ease-out forwards;
-        }
-
-        .carousel-fade .carousel-item {
-          opacity: 0;
-          transition: opacity 0.6s ease-in-out;
-        }
-
-        .carousel-fade .carousel-item.active {
-          opacity: 1;
-        }
-
-        .carousel-item {
-          height: 100vh;
-        }
-
-        .carousel-fade .carousel-item:not(.active) {
-          position: absolute;
-          top: 0;
         }
       `}</style>
     </div>
   );
-}
+};
+
+export default Carousel;
