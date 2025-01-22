@@ -1,5 +1,5 @@
 import React from "react";
-import apexenggtechLogo from "@/images/apexenggtech.png";
+// import apexenggtechLogo from "@/images/apexenggtech.png";
 import Carousel from "@/components/Carousel";
 import aboutImg from "../images/ffeEvaporator.jpg";
 import imageVision from "../images/industryIndustrialFabricChimneys.jpg";
