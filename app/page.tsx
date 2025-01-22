@@ -7,11 +7,15 @@ import imagemission from "../images/mission.jpg";
 import Image from "next/image";
 import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
+import { ProductCarousel } from "@/components/ProductCarousel";
 const Home = () => {
   return (
     <>
       <div className="bg-gray-50">
+
+        {/* Carousel */}
         <Carousel />
+
         {/* About Us Section */}
         <section className="mt-12 p-8 bg-gray-50">
           <h2 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-10 text-gray-800">
@@ -47,67 +51,7 @@ const Home = () => {
         </section>
 
         {/* Mission and Vision */}
-        {/* <section className="mt-14 bg-gray-50 py-12 px-4">
-          <h2 className="text-center text-3xl md:text-4xl font-bold mb-12">
-            OUR VISION & MISSION
-          </h2>
-
-         
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-            
-            <div className="flex flex-col items-center text-center md:w-1/3">
-              <div className="relative w-full h-60 md:h-64">
-               
-                <Image
-                  src={aboutImg.src}
-                  alt="Vision Illustration"
-                  layout="fill"
-                  className="object-cover rounded-lg shadow-md"
-                />
-              </div>
-            </div>
-
-            
-            <div className="bg-white shadow-lg rounded-lg p-6 text-center md:w-1/3">
-              <div className="relative w-full h-32 mb-4">
-            
-                <Image
-                  src={aboutImg.src}
-                  alt="Mission A Illustration"
-                  layout="fill"
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-              <p className="text-gray-600">
-                At our core, we provide innovative engineering solutions designed to elevate our client’s success. We
-                are committed to upholding the highest standards of quality and trust. Our work is driven by a passion
-                for quality and excellence. Together, we craft the future of engineering excellence.
-              </p>
-            </div>
-
-          
-            <div className="bg-white shadow-lg rounded-lg p-6 text-center md:w-1/3">
-              <div className="relative w-full h-32 mb-4">
-                
-                <Image
-                  src={aboutImg.src}
-                  alt="Mission B Illustration"
-                  layout="fill"
-                  className="object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Our Vision</h3>
-              <p className="text-gray-600">
-                We aim to lead with integrity and innovation, delivering top-tier engineering solutions. Our vision is
-                to set the standard in the industry, ensuring client success and lasting partnerships. Excellence in
-                Quality is our commitment, always.
-              </p>
-            </div>
-          </div>
-        </section> */}
-
-        <section className="py-20">
+        <section className="py-10">
           <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">Our Mission & Vision</h2>
           <div className="flex flex-wrap justify-center gap-10">
             {/* Mission Card */}
@@ -130,6 +74,13 @@ Excellence in Quality is our commitment, always. "
             />
           </div>
         </section>
+
+        {/* Products */}
+        <div>
+      <h1 className="text-5xl font-bold text-center mb-6">Our Products</h1>
+      <ProductCarousel />
+    </div>
+
       </div>
     </>
   );
