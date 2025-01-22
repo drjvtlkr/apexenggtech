@@ -117,16 +117,16 @@ export default function Home() {
         <MissionVisionCard
           title="Our Mission"
           description="To inspire and nurture innovation for a better future."
-          imageUrl="https://example.com/mission-image.jpg"
-          link="/mission"
+          // imageUrl="https://example.com/mission-image.jpg"
+          // link="/mission"
         />
 
         {/* Vision Card */}
         <MissionVisionCard
           title="Our Vision"
           description="To be a global leader in sustainable solutions."
-          imageUrl="https://example.com/vision-image.jpg"
-          link="/vision"
+          // imageUrl="https://example.com/vision-image.jpg"
+          // link="/vision"
         />
       </div>
     </section>
