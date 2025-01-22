@@ -1,139 +1,75 @@
 "use client";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+
 import Image from "next/image";
-import { useEffect, useRef } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import image1 from "../images/intermediateRakeTypeCarriers.jpg";
 import image2 from "../images/ffeFinProcess.jpg";
 import image3 from "../images/continuousVacuumPan.jpg";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+
+const images = [
+  {
+    src: image1,
+    text: "Elevating Industries with Cutting Edge Technology",
+  },
+  {
+    src: image2,
+    text: "Elevating Industries with Innovation",
+  },
+  {
+    src: image3,
+    text: "Elevating Industries with Excellent Service",
+  },
+];
 
 export default function Carousel() {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    let carousel: { dispose: () => void } | null = null;
-
-    const initCarousel = async () => {
-      try {
-        const bootstrap = await import("bootstrap/dist/js/bootstrap.bundle.min.js");
-        if (carouselRef.current && bootstrap.Carousel) {
-          carousel = new bootstrap.Carousel(carouselRef.current, {
-            interval: 3000,
-            ride: "carousel",
-            touch: true,
-          });
-        }
-      } catch (error) {
-        console.error("Error initializing carousel:", error);
-      }
-    };
-
-    initCarousel();
-
-    return () => {
-      if (carousel) {
-        carousel.dispose();
-      }
-    };
-  }, []);
-
-  const images = [
-    {
-      src: image1,
-      text: "Welcome to Apex Engineering Technology",
-    },
-    {
-      src: image2,
-      text: "We are a work in progress...",
-    },
-    {
-      src: image3,
-      text: "Stay tuned for more updates!",
-    },
-  ];
-
   return (
-    <div
-      id="carouselExampleFade"
-      ref={carouselRef}
-      className="carousel slide carousel-fade relative overflow-hidden"
-      data-bs-ride="carousel"
-    >
-      <div className="carousel-inner h-screen">
+    <div className="relative w-full h-screen overflow-hidden">
+      <Swiper
+        modules={[EffectFade, Navigation, Pagination, Autoplay]}
+        effect="fade"
+        // navigation
+        pagination={{ clickable: true }}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        loop
+        className="h-full"
+      >
         {images.map((image, idx) => (
-          <div
-            key={idx}
-            className={`carousel-item h-full ${idx === 0 ? "active" : ""}`}
-          >
-            <div className="relative h-full w-full animate-zoom-in">
-              <Image
-                src={image.src}
-                alt={`Slide ${idx + 1}`}
-                className="d-block w-full object-cover"
-                fill
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
-            </div>
+          <SwiperSlide key={idx} className="relative h-full">
+            {/* Image */}
+            <Image
+              src={image.src}
+              alt={image.text}
+              fill
+              className="object-cover"
+              priority={idx === 0}
+              loading={idx === 0 ? "eager" : "lazy"}
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/70" />
 
+            {/* Text */}
             <div className="absolute inset-0 flex items-center justify-start px-16">
-              <div className="w-1/2 animate-slide-down">
-                <h1 className="text-4xl font-bold text-white md:text-6xl">
+              <div className="w-1/2">
+                <h1 className="text-4xl font-bold text-white md:text-6xl animate-slide-down">
                   {image.text}
                 </h1>
               </div>
             </div>
-          </div>
+          </SwiperSlide>
         ))}
-      </div>
+      </Swiper>
 
-      <button
-        className="carousel-control-prev"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="prev"
-      >
-        <span className="carousel-control-prev-icon" aria-hidden="true" />
-        <span className="visually-hidden">Previous</span>
-      </button>
-      <button
-        className="carousel-control-next"
-        type="button"
-        data-bs-target="#carouselExampleFade"
-        data-bs-slide="next"
-      >
-        <span className="carousel-control-next-icon" aria-hidden="true" />
-        <span className="visually-hidden">Next</span>
-      </button>
-
-      <div className="carousel-indicators">
-        {images.map((_, idx) => (
-          <button
-            key={idx}
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide-to={idx}
-            className={idx === 0 ? "active" : ""}
-            aria-current={idx === 0 ? "true" : undefined}
-            aria-label={`Slide ${idx + 1}`}
-          />
-        ))}
-      </div>
-
-      <style jsx global>{`
-        @keyframes zoomIn {
-          from {
-            transform: scale(1.2);
-          }
-          to {
-            transform: scale(1);
-          }
-        }
-
+      <style jsx>{`
         @keyframes slideDown {
           from {
             opacity: 0;
-            transform: translateY(-100px);
+            transform: translateY(-20px);
           }
           to {
             opacity: 1;
@@ -141,30 +77,8 @@ export default function Carousel() {
           }
         }
 
-        .animate-zoom-in {
-          animation: zoomIn 1s ease-out forwards;
-        }
-
         .animate-slide-down {
-          animation: slideDown 0.8s ease-out forwards;
-        }
-
-        .carousel-fade .carousel-item {
-          opacity: 0;
-          transition: opacity 0.6s ease-in-out;
-        }
-
-        .carousel-fade .carousel-item.active {
-          opacity: 1;
-        }
-
-        .carousel-item {
-          height: 100vh;
-        }
-
-        .carousel-fade .carousel-item:not(.active) {
-          position: absolute;
-          top: 0;
+          animation: slideDown 1s ease-in-out forwards;
         }
       `}</style>
     </div>
