@@ -58,15 +58,15 @@ export const CustomerJourney: React.FC = () => {
               background: "#f3f4f6",
               color: "#333",
             }}
-            contentArrowStyle={{ borderRight: "7px solid #f3f4f6" }}
+            contentArrowStyle={{ borderRight: "7px solid orange" }}
             iconStyle={{
               background: "#1e40af",
               color: "#fff",
             }}
             icon={item.icon}
           >
-            <h3 className="text-lg font-bold">{item.title}</h3>
-            <p className="text-sm">{item.description}</p>
+            <h3 className="text-2xl font-bold">{item.title}</h3>
+            <p className="text-lg">{item.description}</p>
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>

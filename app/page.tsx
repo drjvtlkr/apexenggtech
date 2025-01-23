@@ -9,6 +9,7 @@ import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { CustomerJourney } from "@/components/CustomerJourney";
+import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
 const Home = () => {
   return (
     <>
@@ -88,6 +89,9 @@ const Home = () => {
           <CustomerJourney />
         </div>
 
+
+        {/* Services */}
+        <AnimatedTestimonialsDemo />
       </div>
     </>
   );
