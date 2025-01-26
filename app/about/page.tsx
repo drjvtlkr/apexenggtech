@@ -10,7 +10,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-} from "@/components/uis/card";
+} from "@/components/ui/card";
 import {
   FaBookOpen,
   FaCheckCircle,
@@ -22,7 +22,7 @@ import {
   FaThumbsUp,
   FaTools,
 } from "react-icons/fa";
-import { Button } from "@/components/uis/button";
+import { Button } from "@/components/ui/button";
 
 const About = () => {
   return (
