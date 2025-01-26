@@ -193,7 +193,7 @@ const About = () => {
               solutions that adapt to their evolving needs. With a focus on
               reliability, efficiency, and exceptional customer care, we are
               dedicated to providing unparalleled support at every step of our
-              clients' journey with us.
+              clients&apos; journey with us.
             </p>
           </CardContent>
         </Card>
