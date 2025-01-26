@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card } from "./ui/card";
+import { Card } from "./card";
 
 // Product images and text
 import image1 from "../images/intermediateRakeTypeCarriers.jpg";
