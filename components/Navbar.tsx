@@ -11,7 +11,7 @@ const Navbar = () => {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-white shadow-md text-black flex items-center justify-between p-5">
+    <nav className="sticky top-0 bg-white shadow-md text-black flex items-center justify-between p-5">
       <div className="flex items-center">
         <Image
           src={apexLogo}
