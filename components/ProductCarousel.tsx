@@ -12,7 +12,6 @@ import {
 } from "@/components/ui/carousel";
 import { Card } from "./card";
 
-// Product images and text
 import image1 from "../images/intermediateRakeTypeCarriers.jpg";
 import image2 from "../images/ffeFinProcess.jpg";
 import image3 from "../images/continuousVacuumPan.jpg";
@@ -30,41 +29,39 @@ const products = [
 ];
 
 export const ProductCarousel: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = React.useState(0);
-  const itemsPerView = 3;
-  const totalItems = products.length;
+  const [api, setApi] = React.useState<any>();
 
   React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    // Autoplay function
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems);
-    }, 3000); // 3 seconds interval
+      api.scrollNext();
+    }, 3000);
 
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [totalItems]);
-
-  const translateX = `-${(currentIndex % totalItems) * (100 / itemsPerView)}%`;
+    return () => clearInterval(interval);
+  }, [api]);
 
   return (
-    <Carousel
-      opts={{
-        align: "start",
-      }}
-      className="w-full max-w-6xl mx-auto overflow-hidden"
-    >
-      <CarouselContent
-        className="flex gap-1 transition-transform duration-500 ease-in-out"
-        style={{
-          transform: `translateX(${translateX})`,
+    <div className="relative w-full px-12 max-w-7xl mx-auto">
+      <Carousel
+        setApi={setApi}
+        className="w-full"
+        opts={{
+          align: "start",
+          loop: true,
         }}
       >
-        {products.map((product) => (
-          <CarouselItem
-            key={product.id}
-            className="w-full sm:basis-full lg:basis-1/3"
-          >
-            <div className="p-2">
+        <CarouselContent className="-ml-4">
+          {products.map((product) => (
+            <CarouselItem 
+              key={product.id} 
+              className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
+            >
               <Link href="/products">
-                <Card className="overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                <Card className="overflow-hidden rounded-lg shadow-lg cursor-pointer h-full">
                   <div className="relative aspect-square">
                     <Image
                       src={product.image}
@@ -80,24 +77,12 @@ export const ProductCarousel: React.FC = () => {
                   </div>
                 </Card>
               </Link>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious
-        onClick={() =>
-          setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? totalItems - 1 : prevIndex - 1
-          )
-        }
-        className="absolute top-1/2 -left-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-      />
-      <CarouselNext
-        onClick={() =>
-          setCurrentIndex((prevIndex) => (prevIndex + 1) % totalItems)
-        }
-        className="absolute top-1/2 -right-0 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md"
-      />
-    </Carousel>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute -left-4 bg-white" />
+        <CarouselNext className="absolute -right-4 bg-white" />
+      </Carousel>
+    </div>
   );
 };

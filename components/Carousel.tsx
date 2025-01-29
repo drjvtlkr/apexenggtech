@@ -84,7 +84,7 @@ export default function Carousel() {
 
             <div className="absolute inset-0 flex items-center justify-start px-16">
               <div className="w-1/2">
-                <h1 className="text-4xl font-bold text-white md:text-6xl">
+                <h1 className="text-4xl font-bold text-white md:text-7xl">
                   <span className="block animate-fade-in">
                     Elevating Industries with
                   </span>
