@@ -91,7 +91,11 @@ const Home = () => {
 
 
         {/* Services */}
-        <AnimatedTestimonialsDemo />
+        <div className="py-5">
+          <h1 className="text-5xl font-bold text-center mb-6">Exceptional Services We Offer</h1>
+          <AnimatedTestimonialsDemo />
+        </div>
+        
       </div>
     </>
   );
