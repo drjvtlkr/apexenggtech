@@ -50,26 +50,39 @@ export const CustomerJourney: React.FC = () => {
   return (
     <div className="my-12">
       <h2 className="text-center text-5xl font-bold mb-8">Customer Journey</h2>
-      <VerticalTimeline>
-        {timelineData.map((item, index) => (
-          <VerticalTimelineElement
-            key={index}
-            contentStyle={{
-              background: "#f3f4f6",
-              color: "#333",
-            }}
-            contentArrowStyle={{ borderRight: "7px solid orange" }}
-            iconStyle={{
-              background: "#1e40af",
-              color: "#fff",
-            }}
-            icon={item.icon}
-          >
-            <h3 className="text-2xl font-bold">{item.title}</h3>
-            <p className="text-lg">{item.description}</p>
-          </VerticalTimelineElement>
-        ))}
-      </VerticalTimeline>
+      <div className="custom-timeline">
+        <VerticalTimeline>
+          {timelineData.map((item, index) => (
+            <VerticalTimelineElement
+              key={index}
+              contentStyle={{
+                background: "#f3f4f6",
+                color: "#333",
+              }}
+              contentArrowStyle={{ borderRight: "7px solid orange" }}
+              iconStyle={{
+                background: "#1e40af",
+                color: "#fff",
+              }}
+              icon={item.icon}
+            >
+              <h3 className="text-2xl font-bold">{item.title}</h3>
+              <p className="text-lg">{item.description}</p>
+            </VerticalTimelineElement>
+          ))}
+        </VerticalTimeline>
+      </div>
+
+      <style jsx global>{`
+        .vertical-timeline::before {
+          background: orange !important;
+        }
+        
+        /* Optional: If you want to make the line thicker */
+        .vertical-timeline::before {
+          width: 4px !important;
+        }
+      `}</style>
     </div>
   );
 };
