@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 import { useState, useEffect } from "react";
 
 import Image from "next/image";
-import image1 from "../images/intermediateRakeTypeCarriers.jpg";
+import image1 from "../images/boiler-banner4.jpg";
 import image2 from "../images/ffeFinProcess.jpg";
-import image3 from "../images/continuousVacuumPan.jpg";
+import image3 from "../images/epc_banner.jpg";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
 const images = [

@@ -1,7 +1,7 @@
 import React from "react";
 // import apexenggtechLogo from "@/images/apexenggtech.png";
 import Carousel from "@/components/Carousel";
-import aboutImg from "../images/ffeEvaporator.jpg";
+import aboutImg from "../images/epc_banner3.jpg";
 import imageVision from "../images/industryIndustrialFabricChimneys.jpg";
 import imagemission from "../images/BatchPanAuto.png";
 import Image from "next/image";
