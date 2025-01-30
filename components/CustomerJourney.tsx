@@ -1,5 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -7,7 +9,33 @@ import {
 import "react-vertical-timeline-component/style.min.css";
 import { FaCogs, FaDraftingCompass, FaIndustry, FaProjectDiagram, FaChartLine, FaLeaf } from "react-icons/fa";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export const CustomerJourney: React.FC = () => {
+  const timelineRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const elements = gsap.utils.toArray(".timeline-content") as HTMLElement[];
+
+    elements.forEach((el) => {
+      gsap.fromTo(
+        el,
+        { opacity: 0, y: 50 }, 
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: el,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
+  }, []);
+
   const timelineData = [
     {
       title: "Preparation of Technical Specifications",
@@ -48,13 +76,14 @@ export const CustomerJourney: React.FC = () => {
   ];
 
   return (
-    <div className="my-12">
+    <div className="my-12" ref={timelineRef}>
       <h2 className="text-center text-5xl font-bold mb-8">Customer Journey</h2>
       <div className="custom-timeline">
         <VerticalTimeline>
           {timelineData.map((item, index) => (
             <VerticalTimelineElement
               key={index}
+              className="vertical-timeline-element"
               contentStyle={{
                 background: "#f3f4f6",
                 color: "#333",
@@ -66,8 +95,10 @@ export const CustomerJourney: React.FC = () => {
               }}
               icon={item.icon}
             >
-              <h3 className="text-2xl font-bold">{item.title}</h3>
-              <p className="text-lg">{item.description}</p>
+              <div className="timeline-content">
+                <h3 className="text-2xl font-bold">{item.title}</h3>
+                <p className="text-lg">{item.description}</p>
+              </div>
             </VerticalTimelineElement>
           ))}
         </VerticalTimeline>
@@ -76,11 +107,10 @@ export const CustomerJourney: React.FC = () => {
       <style jsx global>{`
         .vertical-timeline::before {
           background: orange !important;
-        }
-        
-        /* Optional: If you want to make the line thicker */
-        .vertical-timeline::before {
           width: 4px !important;
+        }
+        .vertical-timeline-element-icon {
+          transform: none !important;
         }
       `}</style>
     </div>
