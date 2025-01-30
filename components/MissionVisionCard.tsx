@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image, { StaticImageData } from "next/image";
-import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import { CardBody, CardContainer, CardItem } from "./uis/3d-card";
 
 interface MissionVisionCardProps {
   title: string;

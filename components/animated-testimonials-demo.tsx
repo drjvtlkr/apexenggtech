@@ -1,9 +1,10 @@
 import image1 from "../images/chimney2.jpg";
 import image2 from "../images/ffePreHeater.jpg";
-import image3 from "../images/verticalCrystalizer.jpg";
-import image4 from "../images/uhvj.jpg";
-import image5 from "../images/sugarPlantBanner9.jpg";
-import { AnimatedTestimonials } from "./ui/animated-testimonials";
+import image3 from "../images/ffeEvaporator.jpg";
+import image4 from "../images/ffeFinProcess.jpg";
+import image5 from "../images/ffeFinProcess.jpg";
+
+import { AnimatedTestimonials } from "./uis/animated-testimonials";
 
 export function AnimatedTestimonialsDemo() {
   const testimonials = [

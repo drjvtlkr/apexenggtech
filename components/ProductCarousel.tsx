@@ -9,7 +9,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "@/components/uis/carousel";
 import { Card } from "./card";
 
 import image1 from "../images/intermediateRakeTypeCarriers.jpg";

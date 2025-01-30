@@ -3,7 +3,7 @@ import React from "react";
 import Carousel from "@/components/Carousel";
 import aboutImg from "../images/ffeEvaporator.jpg";
 import imageVision from "../images/industryIndustrialFabricChimneys.jpg";
-import imagemission from "../images/mission.jpg";
+import imagemission from "../images/BatchPanAuto.png";
 import Image from "next/image";
 import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
@@ -46,7 +46,7 @@ const Home = () => {
                 Plant Machineries & equipment’s / Jaggery Plants on Turn Key basis.
               </p>
               <div className="mt-6 flex justify-start">
-                <Button label="Explore" link="/explore" />
+                <Button label="Explore" link="/products" />
               </div>
             </div>
           </div>
