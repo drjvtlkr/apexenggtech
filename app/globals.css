@@ -96,3 +96,17 @@ nav{
     @apply bg-background text-foreground;
   }
 }
+@layer utilities {
+  @keyframes glowing {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-glowing {
+    animation: glowing 5s linear infinite;
+  }
+}

@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
-import apexLogo from "@/images/apex.png";
+import apexLogo from "@/images/AbhishEngg.png";
 import Image from "next/image";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
@@ -20,19 +20,12 @@ const Footer = () => {
         <div className="w-full max-w-screen-xl p-4 py-6 lg:py-8">
           <div className="md:flex md:justify-between">
             <div className="mb-6 md:mb-0">
-              <Link href="#" className="flex items-center">
+              <Link href="/" className="flex items-center">
                 <Image
                   src={apexLogo}
-                  className="h-24 w-24 m-2 md:m-4 lg:h-36 lg:w-36 "
+                  className="w-40 h-auto m-2 md:m-4 lg:h-auto lg:w-72 "
                   alt="Apex Logo"
                 />
-                <span className="self-center text-2xl md:text-3xl lg:text-5xl font-semibold whitespace-nowrap">
-                  Abhishek
-                  <br />
-                  Engineering
-                  <br />
-                  Works
-                </span>
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -40,19 +33,26 @@ const Footer = () => {
                 <h2 className="mb-6 text-2xl font-semibold text-gray-900 uppercase ">
                   Links
                 </h2>
-                <ul className="text-xl text-gray-500 dark:text-gray-400 font-medium">
+                <ul className="text-xl text-gray-700 font-semibold">
+                <li className="mb-4">
+                    <Link
+                      href="/"
+                      className="hover:underline">
+                      Home
+                    </Link>
+                  </li>
                   <li className="mb-4">
                     <Link
                       className="hover:underline"
-                      href="https://flowbite.com/">
-                      Flowbite
+                      href="/about">
+                      About Us
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href="https://tailwindcss.com/"
+                      href="/products"
                       className="hover:underline">
-                      Tailwind CSS
+                      Our Products
                     </Link>
                   </li>
                 </ul>

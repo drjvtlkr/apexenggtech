@@ -10,11 +10,11 @@ import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { CustomerJourney } from "@/components/CustomerJourney";
 import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
+import ContactForm from "@/components/ContactUs";
 const Home = () => {
   return (
     <>
       <div className="bg-gray-50">
-
         {/* Carousel */}
         <Carousel />
 
@@ -37,16 +37,18 @@ const Home = () => {
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <p className="text-gray-700 text-lg md:text-xl lg:text-3xl leading-relaxed">
                 It’s a great pleasure to introduce our organization
-                <strong> Abhishek Engineering Works (AEW)</strong>, a latest design and technology-oriented company
-                situated in Dharwad. We specialize in manufacturing and supplying world-class equipment for
-                Sugar Plant, Jaggery Plant, and Allied industries.
+                <strong> Abhishek Engineering Works (AEW)</strong>, a latest
+                design and technology-oriented company situated in Dharwad. We
+                specialize in manufacturing and supplying world-class equipment
+                for Sugar Plant, Jaggery Plant, and Allied industries.
               </p>
               <p className="text-gray-700 text-lg md:text-xl lg:text-3xl leading-relaxed mt-4">
-                We are committed to set high level standards in Design and Manufacturing of Complete Sugar
-                Plant Machineries & equipment’s / Jaggery Plants on Turn Key basis.
+                We are committed to set high level standards in Design and
+                Manufacturing of Complete Sugar Plant Machineries & equipment’s
+                / Jaggery Plants on Turn Key basis.
               </p>
               <div className="mt-6 flex justify-start">
-                <Button label="Explore" link="/products" />
+                <Button label="Explore" link="/about" />
               </div>
             </div>
           </div>
@@ -54,7 +56,9 @@ const Home = () => {
 
         {/* Mission and Vision */}
         <section className="py-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">Our Mission & Vision</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">
+            Our Mission & Vision
+          </h2>
           <div className="flex flex-wrap justify-center gap-10">
             {/* Mission Card */}
             <MissionVisionCard
@@ -89,9 +93,12 @@ const Home = () => {
           <CustomerJourney />
         </div>
 
-
         {/* Services */}
         <AnimatedTestimonialsDemo />
+
+        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full h-auto">
+          <ContactForm />
+        </section>
       </div>
     </>
   );
