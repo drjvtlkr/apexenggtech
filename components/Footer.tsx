@@ -59,7 +59,7 @@ const Footer = () => {
               </div>
               <div>
                 <h2 className="mb-6 text-2xl font-semibold text-gray-900 uppercase dark:text-white">
-                  Products
+                  Product
                 </h2>
                 <ul className="text-gray-500 text-xl dark:text-gray-400 font-medium">
                   <li className="mb-4">
