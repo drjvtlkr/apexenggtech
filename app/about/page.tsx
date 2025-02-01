@@ -6,12 +6,6 @@ import verticalImg from "@/images/verticalCrystalizer.jpg";
 import interImg from "@/images/interRackCarrier.jpg";
 import mdImg from "@/images/MDSir .jpg";
 import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/uis/card";
-import {
   FaBookOpen,
   FaCheckCircle,
   FaClock,

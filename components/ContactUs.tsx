@@ -45,7 +45,7 @@ export default function ContactForm() {
       <CardHeader>
         <CardTitle className="text-3xl">Contact Us</CardTitle>
         <CardDescription className="text-lg">
-          Fill out the form below and we'll get back to you as soon as possible.
+          Fill out the form below and we&apos;ll get back to you as soon as possible.
         </CardDescription>
       </CardHeader>
       <CardContent>
