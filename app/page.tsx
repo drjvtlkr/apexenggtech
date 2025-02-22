@@ -1,6 +1,7 @@
 import React from "react";
 // import apexenggtechLogo from "@/images/apexenggtech.png";
 import Carousel from "@/components/Carousel";
+import Services from "@/components/Services";
 import aboutImg from "../images/epc_banner3.jpg";
 import imageVision from "../images/industryIndustrialFabricChimneys.jpg";
 import imagemission from "../images/BatchPanAuto.png";
@@ -93,9 +94,10 @@ const Home = () => {
         {/* Services */}
         <div className="py-5">
           <h1 className="text-5xl font-bold text-center mb-6">Exceptional Services We Offer</h1>
-          <AnimatedTestimonialsDemo />
+          {/* <AnimatedTestimonialsDemo /> */}
+          <Services />
         </div>
-        
+
       </div>
     </>
   );
