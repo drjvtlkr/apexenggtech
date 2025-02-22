@@ -76,7 +76,7 @@ export default function Carousel() {
               src={image.src}
               alt={`Elevating Industries with ${image.dynamicText}`}
               fill
-              className="object-cover brightness-30 " 
+              className="object-bottom brightness-30 " 
               priority={idx === 0}
               loading={idx === 0 ? "eager" : "lazy"}
             />
