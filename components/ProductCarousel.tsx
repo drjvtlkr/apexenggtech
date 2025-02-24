@@ -56,8 +56,8 @@ export const ProductCarousel: React.FC = () => {
       >
         <CarouselContent className="-ml-4">
           {products.map((product) => (
-            <CarouselItem 
-              key={product.id} 
+            <CarouselItem
+              key={product.id}
               className="pl-4 basis-full md:basis-1/2 lg:basis-1/3"
             >
               <Link href="/products">
@@ -71,9 +71,12 @@ export const ProductCarousel: React.FC = () => {
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 33vw"
                       priority
                     />
-                    <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent text-white p-4">
-                      <h3 className="text-xl font-medium">{product.name}</h3>
+                    <div className="">
+                      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black to-transparent p-4">
+                        <h3 className="text-xl font-medium text-white">{product.name}</h3>
+                      </div>
                     </div>
+
                   </div>
                 </Card>
               </Link>

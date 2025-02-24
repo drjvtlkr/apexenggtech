@@ -11,6 +11,7 @@ import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
 import { CustomerJourney } from "@/components/CustomerJourney";
 import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
+import CustomerJourney1 from "@/components/CustomerJourney1";
 const Home = () => {
   return (
     <>
@@ -87,7 +88,8 @@ const Home = () => {
         {/* Customer Journey */}
         <div className="py-10 mt-3">
           {/* <h1 className="text-5xl font-bold text-center mb-6">Customer Journey</h1> */}
-          <CustomerJourney />
+          {/* <CustomerJourney /> */}
+          <CustomerJourney1 />
         </div>
 
 
