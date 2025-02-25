@@ -56,7 +56,7 @@ const Home = () => {
 
         {/* Mission and Vision */}
         <section className="py-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center">Our Mission & Vision</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-0">Our Mission & Vision</h2>
           <div className="flex flex-wrap justify-center gap-10">
             {/* Mission Card */}
             <MissionVisionCard
@@ -86,7 +86,7 @@ const Home = () => {
         </div>
 
         {/* Customer Journey */}
-        <div className="py-10 mt-3">
+        <div className="mt-12">
           {/* <h1 className="text-5xl font-bold text-center mb-6">Customer Journey</h1> */}
           {/* <CustomerJourney /> */}
           <CustomerJourney1 />
@@ -94,8 +94,7 @@ const Home = () => {
 
 
         {/* Services */}
-        <div className="py-5">
-          <h1 className="text-5xl font-bold text-center mb-6">Exceptional Services We Offer</h1>
+        <div className="">
           {/* <AnimatedTestimonialsDemo /> */}
           <Services />
         </div>

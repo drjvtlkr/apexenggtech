@@ -53,7 +53,7 @@ const journeySteps = [
   },
 ];
 
-const CustomerJourney1: React.FC = () => {
+const CustomerJourney: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
@@ -64,7 +64,7 @@ const CustomerJourney1: React.FC = () => {
     if (!section || !timeline) return;
 
     gsap.to(timeline, {
-      x: () => -(timeline.scrollWidth - section.clientWidth),
+      x: () => -(timeline.scrollWidth - section.clientWidth - window.innerWidth * 0),
       ease: "none",
       scrollTrigger: {
         trigger: section,
@@ -77,25 +77,33 @@ const CustomerJourney1: React.FC = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full h-[100vh] overflow-hidden bg-gray-900 text-white py-16 px-8">
+    <div
+      ref={containerRef}
+      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white py-16 px-4"
+    >
       {/* Title */}
-      <h2 className="text-center text-5xl font-bold mb-12">Customer Journey</h2>
+      <h1 className="text-center text-5xl font-bold mb-12">Customer Journey</h1>
 
       {/* Scrolling Section */}
-      <div ref={timelineRef} className="flex gap-12 w-max">
-        {journeySteps.map((step, index) => (
-          <div
-            key={index}
-            className="w-[300px] md:w-[350px] lg:w-[400px] bg-white bg-opacity-10 rounded-xl p-6 shadow-lg backdrop-blur-md flex flex-col items-center text-center"
-          >
-            <div className="mb-4">{step.icon}</div>
-            <h3 className="text-2xl font-semibold">{step.title}</h3>
-            <p className="text-gray-300 mt-2">{step.description}</p>
-          </div>
-        ))}
+      <div className="relative w-full overflow-hidden flex items-center">
+        <div
+          ref={timelineRef}
+          className="flex gap-12 w-max md:gap-6 lg:gap-12 flex-col md:flex-row justify-center items-center px-4 md:px-0"
+        >
+          {journeySteps.map((step, index) => (
+            <div
+              key={index}
+              className="w-[300px] md:w-[350px] lg:w-[400px] bg-white bg-opacity-10 rounded-xl p-6 shadow-lg backdrop-blur-md flex flex-col items-center text-center"
+            >
+              <div className="mb-4">{step.icon}</div>
+              <h3 className="text-2xl font-semibold">{step.title}</h3>
+              <p className="text-gray-300 mt-2">{step.description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default CustomerJourney1;
+export default CustomerJourney;

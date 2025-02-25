@@ -31,9 +31,9 @@ const servicesData = [
 const Services = () => {
   return (
     <div className="bg-gray-100 dark:bg-gray-900 py-16 px-6 md:px-12 lg:px-20">
-      <h2 className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-10">
-        Our Services
-      </h2>
+      <h1 className="text-5xl font-bold text-center mb-6">
+        Exceptional Services We Offer
+      </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {servicesData.map((service, index) => (
           <div
