@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
   FaCogs,
   FaDraftingCompass,
@@ -11,8 +10,6 @@ import {
   FaChartLine,
   FaLeaf,
 } from "react-icons/fa";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const journeySteps = [
   {
@@ -54,50 +51,33 @@ const journeySteps = [
 ];
 
 const CustomerJourney: React.FC = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
   const timelineRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const section = containerRef.current;
     const timeline = timelineRef.current;
-
-    if (!section || !timeline) return;
+    if (!timeline) return;
 
     gsap.to(timeline, {
-      x: () => -(timeline.scrollWidth - section.clientWidth - window.innerWidth * 0),
-      ease: "none",
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: () => `+=${timeline.scrollWidth}`,
-        scrub: 1,
-        pin: true,
-      },
+      xPercent: -50,
+      repeat: -1,
+      duration: 25,
+      ease: "linear",
     });
   }, []);
 
   return (
-    <div
-      ref={containerRef}
-      className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white py-16 px-4"
-    >
-      {/* Title */}
-      <h1 className="text-center text-5xl font-bold mb-12">Customer Journey</h1>
-
-      {/* Scrolling Section */}
-      <div className="relative w-full overflow-hidden flex items-center">
-        <div
-          ref={timelineRef}
-          className="flex gap-12 w-max md:gap-6 lg:gap-12 flex-col md:flex-row justify-center items-center px-4 md:px-0"
-        >
-          {journeySteps.map((step, index) => (
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white py-16 px-4 overflow-hidden">
+      <h1 className="text-center text-xl md:text-3xl lg:text-5xl font-bold mb-12">Customer Journey</h1>
+      <div className="relative w-full flex items-center overflow-hidden">
+        <div ref={timelineRef} className="flex gap-12 w-max">
+          {[...journeySteps, ...journeySteps].map((step, index) => (
             <div
               key={index}
               className="w-[300px] md:w-[350px] lg:w-[400px] bg-white bg-opacity-10 rounded-xl p-6 shadow-lg backdrop-blur-md flex flex-col items-center text-center"
             >
               <div className="mb-4">{step.icon}</div>
-              <h3 className="text-2xl font-semibold">{step.title}</h3>
-              <p className="text-gray-300 mt-2">{step.description}</p>
+              <h3 className="text-3xl font-semibold">{step.title}</h3>
+              <p className="text-gray-300 mt-2 font-sans text-md">{step.description}</p>
             </div>
           ))}
         </div>

@@ -55,16 +55,19 @@ const Home = () => {
         </section>
 
         {/* Mission and Vision */}
-        <section className="py-10">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-0">Our Mission & Vision</h2>
+        <section className="py-10 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-8">
+            Our Mission & Vision
+          </h2>
+
           <div className="flex flex-wrap justify-center gap-10">
             {/* Mission Card */}
             <MissionVisionCard
               title="Our Mission"
               description="At our core, we provide innovative engineering solutions designed to elevate our client’s 
-              success. We are committed to upholding the highest standards of quality and trust. Our work is 
-              driven by a passion for quality and excellence. Together, we craft the future of engineering 
-              excellence. "
+      success. We are committed to upholding the highest standards of quality and trust. Our work is 
+      driven by a passion for quality and excellence. Together, we craft the future of engineering 
+      excellence."
               image={imagemission}
             />
 
@@ -72,15 +75,16 @@ const Home = () => {
             <MissionVisionCard
               title="Our Vision"
               description="We aim to lead with integrity and innovation, delivering top-tier engineering solutions. Our 
-              vision is to set the standard in the industry, ensuring client success and lasting partnerships. 
-              Excellence in Quality is our commitment, always. "
+      vision is to set the standard in the industry, ensuring client success and lasting partnerships. 
+      Excellence in Quality is our commitment, always."
               image={imageVision}
             />
           </div>
         </section>
 
+
         {/* Products */}
-        <div>
+        <div className="mt-10 lg:mt-20">
           <h1 className="text-5xl font-bold text-center mb-6">Our Products</h1>
           <ProductCarousel />
         </div>
