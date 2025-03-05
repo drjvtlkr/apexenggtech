@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import apexLogo from "@/images/ApexEnggTechFinalized.png";
 import abhiLogo from "@/images/apex.png";
 import abhi from "@/images/AbhishEngg.png"
 import { usePathname } from "next/navigation";
