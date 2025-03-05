@@ -26,10 +26,10 @@ const About = () => {
 
       <section className="mt-12 p-8">
         <div className="h-screen mb-32 lg:mb-10">
-          <h2 className="text-center text-2xl md:text-3xl lg:text-6xl font-bold m-8 text-gray-800">
-            Who we are
-          </h2>
-          <div className="flex flex-col lg:flex-row items-center gap-10 bg-slate-100 p-8 rounded">
+        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
+          Who We Are?
+        </h2>
+          <div className="flex flex-col lg:flex-row items-center gap-10 bg-[#A7E6FF] p-8 rounded">
             <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
               <Image
                 src={ffeImg.src}
@@ -88,35 +88,36 @@ const About = () => {
             </div>
         </div> */}
 
-        <div className="flex flex-col lg:flex-row-reverse items-center gap-10 h-screen bg-orange-100 p-8 rounded-lg">
-          <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
-            <Image
-              src={verticalImg.src}
-              alt="About Us"
-              className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
-              layout="fill"
-            />
-          </div>
+        <div className="h-screen mb-32 lg:mb-10">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 h-screen bg-[#EEF8FF] mt-96 md:mt-20 lg:-mt-32 p-8 rounded-lg">
+            <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
+              <Image
+                src={verticalImg.src}
+                alt="About Us"
+                className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
+                layout="fill"
+              />
+            </div>
 
-          <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
-              <strong>
-                AEW is located in the Belur Industrial Area of Dharwad,
-                Karnataka, strategically positioned along the Golden
-                Quadrilateral Road (NH4).
-              </strong>{" "}
-              <br />
-              This Prime location offers excellent infrastructure, including
-              access to reliable water, power, skilled and unskilled labor, as
-              well as efficient transport and communication networks.
-              Additionally, our location benefits from various fiscal incentives
-              provided by the Karnataka Government, making it an ideal base for
-              growth and development.
-            </p>
+            <div className="w-full lg:w-1/2 flex flex-col justify-center">
+              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
+                <strong>
+                  AEW is located in the Belur Industrial Area of Dharwad,
+                  Karnataka, strategically positioned along the Golden
+                  Quadrilateral Road (NH4).
+                </strong>{" "}
+                <br />
+                This Prime location offers excellent infrastructure, including
+                access to reliable water, power, skilled and unskilled labor, as
+                well as efficient transport and communication networks.
+                Additionally, our location benefits from various fiscal
+                incentives provided by the Karnataka Government, making it an
+                ideal base for growth and development.
+              </p>
+            </div>
           </div>
         </div>
-
-        <div className="flex flex-col lg:flex-row items-center mt-8 gap-10 h-screen bg-gray-200 p-4 rounded-lg">
+        <div className="flex flex-col lg:flex-row items-center mt-8 gap-10 h-screen bg-[#A7E6FF] p-4 rounded-lg">
           <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
             <Image
               src={interImg.src}
@@ -143,12 +144,12 @@ const About = () => {
         </div>
       </section>
 
-      <section className="h-screen flex flex-col justify-center items-center p-8 bg-gray-50">
-        <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-6 text-gray-800">
+      <section className="h-screen flex flex-col justify-center mt-20  items-center p-8 bg-[#D9EAFD]">
+        <h2 className="w-full text-center rainbow-underline text-2xl md:text-3xl lg:text-5xl font-bold mb-6 text-gray-800">
           Leading with Vision
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 h-9/10 w-9/10 max-w-6xl">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 h-9/10 w-9/10 max-w-6xl ">
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
               src={mdImg}
@@ -164,7 +165,7 @@ const About = () => {
             <h4 className="text-lg md:text-xl font-semibold mb-4">
               Managing Director
             </h4>
-            <p className="text-xl text-center">
+            <p className="text-md text-center lg:text-2xl">
               With over 30+ years of extensive experience in Mechanical
               Engineering, Mr. V M Kamatar serves as Managing Director at
               Abhishek Engg Works (AEW). He has held key roles as a Design
@@ -181,9 +182,11 @@ const About = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center mt-12 p-8 bg-gray-100">
+      <section className="flex flex-col md:flex-row items-center mt-12 p-8 bg-[#eef8ff]">
         <div className="flex flex-col justify-center items-center flex-1 p-8">
-          <h2 className="text-4xl rainbow-underline mb-4">Quality</h2>
+          <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
+            Quality
+          </h2>
           <p className="text-md md:text-lg lg:text-xl leading-7">
             At AEW,{" "}
             <strong>Quality is at the heart of everything we do.</strong> We go
@@ -197,9 +200,10 @@ const About = () => {
             clients and industry.
           </p>
         </div>
-        <hr className="text-4xl text-gray-700 rotate-90" />
         <div className="flex flex-col justify-center items-center flex-1 p-8">
-          <h2 className="text-4xl rainbow-underline mb-4">Service</h2>
+          <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
+            Service
+          </h2>
           <p className="text-md md:text-lg lg:text-xl leading-7">
             At AEW,{" "}
             <strong>
@@ -221,8 +225,8 @@ const About = () => {
       </section>
 
       <section className="mt-12 p-8 bg-gray-50 min-h-screen flex flex-col justify-center">
-        <h2 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
-          Why Trust ABHISHEK ENGINEERING WORKS with Your Project Needs?
+        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
+          Why Trust ABHISHEK ENGG WORKS with Your Project Needs?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 h-full">
@@ -284,10 +288,14 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 max-h-[80vh]">
+              className="group bg-[#a1e3f9] p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 max-h-[80vh]">
               <div className="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4 mx-auto transform group-hover:scale-110 transition-transform duration-300">
                 {typeof item.icon === "string" ? (
-                  <Image src={item.icon} alt={item.title} className="w-10 h-10" />
+                  <Image
+                    src={item.icon}
+                    alt={item.title}
+                    className="w-10 h-10"
+                  />
                 ) : (
                   item.icon
                 )}
@@ -305,7 +313,7 @@ const About = () => {
 
       <section className="flex justify-center mt-12 p-8 bg-gray-50">
         <Link href="/#contactus">
-          <Button className="bg-orange-400 w-52 h-12 text-4xl hover:bg-orange-500 hover:text-black">
+          <Button className="bg-[#1d8cc5] w-52 h-12 text-4xl hover:bg-orange-300 hover:text-black">
             Contact us
           </Button>
         </Link>
