@@ -21,7 +21,7 @@ const Home = () => {
         {/* About Us Section */}
         <section className="mt-12 p-8 bg-gray-50">
           <h2 className="text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-10 text-gray-800">
-            Welcome to Abhishek Engineering Works
+            Welcome to Abhishek Engg Works
           </h2>
           <div className="flex flex-col md:flex-row items-center gap-10">
             {/* Image on the left */}
@@ -37,7 +37,7 @@ const Home = () => {
             <div className="w-full md:w-1/2 flex flex-col justify-center">
               <p className="text-gray-700 text-lg md:text-xl lg:text-3xl leading-relaxed">
                 It’s a great pleasure to introduce our organization
-                <strong> Abhishek Engineering Works (AEW)</strong>, a latest
+                <strong> Abhishek Engg Works (AEW)</strong>, a latest
                 design and technology-oriented company situated in Dharwad. We
                 specialize in manufacturing and supplying world-class equipment
                 for Sugar Plant, Jaggery Plant, and Allied industries.
