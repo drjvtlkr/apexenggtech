@@ -38,7 +38,7 @@ const Meteors = ({ number = 10, className }) => {
       {meteors.map((_, idx) => (
         <span
           key={"meteor" + idx}
-          className={`animate-meteor-effect absolute h-0.5 w-0.5 rounded-[9999px] bg-slate-500 shadow-[0_0_0_1px_#ffffff10] rotate-[215deg] before:content-[''] before:absolute before:top-1/2 before:transform before:-translate-y-[50%] before:w-[50px] before:h-[1px] before:bg-gradient-to-r before:from-[#64748b] before:to-transparent ${className}`}
+          className={`animate-meteor-effect absolute h-0.5 w-0.5 rounded-full bg-slate-500 shadow-[0_0_0_1px_#ffffff10] rotate-[215deg] before:content-[''] before:absolute before:top-1/2 before:transform before:-translate-y-[50%] before:w-[50px] before:h-[1px] before:bg-gradient-to-r before:from-[#64748b] before:to-transparent ${className}`}
           style={{
             top: Math.random() * 100 + "%",
             left: Math.random() * 100 + "%",
@@ -53,12 +53,11 @@ const Meteors = ({ number = 10, className }) => {
 
 const Services = () => {
   return (
-    <div className="h-screen bg-black flex flex-col items-center justify-center px-6 md:px-12 lg:px-20 relative overflow-hidden font-sans">
-      <h1 className="text-5xl font-bold text-center mb-10 text-white relative inline-block">
+    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden font-sans py-12">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 text-white relative inline-block">
         Exceptional Services We Offer
-        {/* <span className="absolute left-0 bottom-0 w-full h-1 bg-gradient-to-r from-blue-400 to-purple-500 animate-underline" /> */}
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl">
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
@@ -66,11 +65,13 @@ const Services = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
             whileHover={{ scale: 1.05, backgroundColor: "#1f2937", color: "#fff" }}
-            className="relative bg-gray-900 text-white shadow-xl rounded-xl p-6 transform transition-all duration-300 border border-gray-700 hover:shadow-2xl hover:border-blue-500 font-sans overflow-hidden"
+            className="relative bg-gray-800 text-white shadow-lg rounded-lg p-4 sm:p-6 lg:p-8 transform transition-all duration-300 border border-gray-700 hover:shadow-2xl hover:border-blue-500 font-sans overflow-hidden"
           >
-            <Meteors number={5} className="opacity-30" />
-            <h3 className="text-2xl font-bold relative z-10">{service.title}</h3>
-            <p className="text-gray-300 mt-3 relative z-10">{service.description}</p>
+            <Meteors number={3} className="opacity-20" />
+            <h3 className="text-xl sm:text-2xl font-bold relative z-10">{service.title}</h3>
+            <p className="text-gray-400 mt-2 sm:mt-3 text-sm sm:text-base relative z-10">
+              {service.description}
+            </p>
           </motion.div>
         ))}
       </div>

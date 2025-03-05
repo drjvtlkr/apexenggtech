@@ -67,7 +67,7 @@ const CustomerJourney: React.FC = () => {
 
   return (
     <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white py-16 px-4 overflow-hidden">
-      <h1 className="text-center text-xl md:text-3xl lg:text-5xl font-bold mb-12">Customer Journey</h1>
+      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Customer Journey</h1>
       <div className="relative w-full flex items-center overflow-hidden">
         <div ref={timelineRef} className="flex gap-12 w-max">
           {[...journeySteps, ...journeySteps].map((step, index) => (

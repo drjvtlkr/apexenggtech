@@ -55,8 +55,8 @@ const Home = () => {
         </section>
 
         {/* Mission and Vision */}
-        <section className="py-10 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
-          <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold text-center mb-8">
+        <section className="py-10 bg-gradient-to-r from-gray-800 to-gray-900 text-white px-5">
+          <h2 className="text-3xl md:text-3xl lg:text-5xl font-bold text-center mb-2 md:mb-8 lg:mb-8">
             Our Mission & Vision
           </h2>
 
@@ -85,7 +85,7 @@ const Home = () => {
 
         {/* Products */}
         <div className="mt-10 lg:mt-20">
-          <h1 className="text-5xl font-bold text-center mb-6">Our Products</h1>
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">Our Products</h1>
           <ProductCarousel />
         </div>
 
