@@ -266,7 +266,7 @@ const About = () => {
               className="group bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105">
               <div className="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4 mx-auto transform group-hover:scale-110 transition-transform duration-300">
                 {typeof item.icon === "string" ? (
-                  <img src={item.icon} alt={item.title} className="w-10 h-10" />
+                  <Image src={item.icon} alt={item.title} className="w-10 h-10" />
                 ) : (
                   item.icon
                 )}

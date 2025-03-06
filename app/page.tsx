@@ -9,8 +9,8 @@ import Image from "next/image";
 import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
-import { CustomerJourney } from "@/components/CustomerJourney";
-import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
+// import { CustomerJourney } from "@/components/CustomerJourney";
+// import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
 import CustomerJourney1 from "@/components/CustomerJourney1";
 const Home = () => {
   return (
