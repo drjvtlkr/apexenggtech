@@ -24,12 +24,12 @@ const About = () => {
     <>
       <AboutCarousel />
 
-      <section className="mt-12 p-8">
+      <section className="mt-12 ">
         <div className="h-screen mb-32 lg:mb-10">
         <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
           Who We Are?
         </h2>
-          <div className="flex flex-col lg:flex-row items-center gap-10 bg-[#A7E6FF] p-8 rounded">
+          <div className="flex flex-col lg:flex-row items-center gap-10 bg-[#111828] p-8 rounded">
             <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
               <Image
                 src={ffeImg.src}
@@ -40,14 +40,14 @@ const About = () => {
             </div>
 
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
                 It&apos;s a great pleasure to introduce our organization
                 <strong> Abhishek Engg Works (AEW)</strong>, a latest design and
                 technology-oriented company situated in Dharwad. We specialize
                 in manufacturing and supplying world-class equipment for Sugar
                 Plant, Jaggery Plant, and Allied industries.
               </p>
-              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
+              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
                 Founded in 2012, our mission is to provide energy-efficient,
                 reliable, and innovative solutions to Sugar Plant, Jaggery Plant
                 and Allied industries. Our ability to fabricate, erect and
@@ -89,7 +89,7 @@ const About = () => {
         </div> */}
 
         <div className="h-screen mb-32 lg:mb-10">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 h-screen bg-[#EEF8FF] mt-96 md:mt-20 lg:-mt-32 p-8 rounded-lg">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 h-screen bg-[#283136] mt-96 md:mt-20 lg:-mt-32 p-8 rounded-lg">
             <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
               <Image
                 src={verticalImg.src}
@@ -100,7 +100,7 @@ const About = () => {
             </div>
 
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
                 <strong>
                   AEW is located in the Belur Industrial Area of Dharwad,
                   Karnataka, strategically positioned along the Golden
@@ -117,7 +117,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center mt-8 gap-10 h-screen bg-[#A7E6FF] p-4 rounded-lg">
+        <div className="flex flex-col lg:flex-row items-center mt-8 gap-10 h-screen bg-[#111828] p-4 rounded-lg">
           <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
             <Image
               src={interImg.src}
@@ -128,13 +128,13 @@ const About = () => {
           </div>
 
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
+            <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
               The company is equipped with cutting-edge infrastructure and
               advanced machinery, ensuring the design and production of
               high-performance, heavy-duty equipment with unmatched precision
               and reliability.
             </p>
-            <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
+            <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
               The total factory area is <strong>7300 Sq. Mtr </strong> and
               Workshop Shed Area:{" "}
               <strong>30 Mtr long x 16 Mtr. wide x 8.00 Mtr.</strong> Crane
@@ -182,7 +182,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center mt-12 p-8 bg-[#eef8ff]">
+      <section className="flex flex-col md:flex-row items-center mt-12 p-8 bg-[#202938]  text-white">
         <div className="flex flex-col justify-center items-center flex-1 p-8">
           <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
             Quality
@@ -224,8 +224,8 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-12 p-8 bg-gray-50 min-h-screen flex flex-col justify-center">
-        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
+      <section className="mt-12 p-8 bg-[#111828] min-h-screen flex flex-col justify-center">
+        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-50">
           Why Trust ABHISHEK ENGG WORKS with Your Project Needs?
         </h2>
 
@@ -288,7 +288,7 @@ const About = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="group bg-[#a1e3f9] p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 max-h-[80vh]">
+              className="group bg-[#fff] p-6 rounded-lg shadow-lg hover:shadow-xl transition-transform duration-300 transform hover:scale-105 max-h-[80vh]">
               <div className="flex items-center justify-center w-16 h-16 bg-orange-100 rounded-full mb-4 mx-auto transform group-hover:scale-110 transition-transform duration-300">
                 {typeof item.icon === "string" ? (
                   <Image

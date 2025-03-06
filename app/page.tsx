@@ -96,7 +96,7 @@ const Home = () => {
         {/* Services */}
         <AnimatedTestimonialsDemo />
 
-        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full h-auto">
+        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full h-screen">
           <ContactForm />
         </section>
       </div>
