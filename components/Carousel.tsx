@@ -7,13 +7,20 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { useState, useEffect } from "react";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import image1 from "../images/epc_banner1.jpg";
 import image2 from "../images/boiler-banner4 (1).jpg";
 import image3 from "../images/epc_banner.jpg";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 
-const images = [
+// ✅ Fix: Change 'src' type to 'StaticImageData'
+interface ImageData {
+  src: StaticImageData; 
+  dynamicText: string;
+}
+
+// Image array
+const images: ImageData[] = [
   {
     src: image1,
     dynamicText: "Cutting Edge Technology",
@@ -28,7 +35,12 @@ const images = [
   },
 ];
 
-const TypeWriter = ({ text }) => {
+// Type definition for TypeWriter props
+interface TypeWriterProps {
+  text: string;
+}
+
+const TypeWriter: React.FC<TypeWriterProps> = ({ text }) => {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -40,9 +52,9 @@ const TypeWriter = ({ text }) => {
   useEffect(() => {
     if (currentIndex < text.length) {
       const timeout = setTimeout(() => {
-        setDisplayText(prev => prev + text[currentIndex]);
-        setCurrentIndex(prev => prev + 1);
-      }, 100); 
+        setDisplayText((prev) => prev + text[currentIndex]);
+        setCurrentIndex((prev) => prev + 1);
+      }, 100);
 
       return () => clearTimeout(timeout);
     }
@@ -65,7 +77,7 @@ export default function Carousel() {
         modules={[EffectFade, Navigation, Pagination, Autoplay]}
         effect="fade"
         pagination={{ clickable: true }}
-        autoplay={{ delay: 5000, disableOnInteraction: false }} 
+        autoplay={{ delay: 5000, disableOnInteraction: false }}
         loop
         className="h-full"
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
@@ -76,7 +88,7 @@ export default function Carousel() {
               src={image.src}
               alt={`Elevating Industries with ${image.dynamicText}`}
               fill
-              className="object-bottom brightness-30 " 
+              className="object-bottom brightness-30"
               priority={idx === 0}
               loading={idx === 0 ? "eager" : "lazy"}
             />
@@ -89,9 +101,7 @@ export default function Carousel() {
                     Elevating Industries with
                   </span>
                   <span className="block mt-2 min-h-[1.5em]">
-                    {idx === activeIndex && (
-                      <TypeWriter text={image.dynamicText} />
-                    )}
+                    {idx === activeIndex && <TypeWriter text={image.dynamicText} />}
                   </span>
                 </h1>
               </div>
