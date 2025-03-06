@@ -12,6 +12,7 @@ import { ProductCarousel } from "@/components/ProductCarousel";
 // import { CustomerJourney } from "@/components/CustomerJourney";
 // import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
 import CustomerJourney1 from "@/components/CustomerJourney1";
+import ContactForm from "@/components/ContactUs";
 const Home = () => {
   return (
     <>
@@ -103,6 +104,9 @@ const Home = () => {
           <Services />
         </div>
 
+        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full h-screen">
+          <ContactForm />
+        </section>
       </div>
     </>
   );
