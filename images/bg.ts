@@ -11,7 +11,7 @@ import epcBanerLogo from "@/images/epc_baner.jpg"
 import epcBannerLogo from "@/images/epc_banner.jpg"
 import epcBanner2Logo from "@/images/epc_banner2.jpg"
 import epcBanner3Logo from "@/images/epc_banner3.jpg"
-
+import caneImg from  "@/images/Cane unloader .jpg"
 
 
 export interface CustomImage{
@@ -28,17 +28,30 @@ export const images: CustomImage[]=[
 ]
 
 export const aboutImages:CustomImage[]=[
-    {src: boilerLogo , alt:""},
+    // {src: boilerLogo , alt:""},
     {src: boiler1Logo, alt:""},
     {src: boiler2Logo, alt:""},
-    {src: boiler3Logo, alt:""},
-    {src: epcBanerLogo, alt:""},
+    // {src: boiler3Logo, alt:""},
+    // {src: epcBanerLogo, alt:""},
     {src: epcBannerLogo, alt:""},
-    {src: epcBanner2Logo, alt:""},
-    {src: epcBanner3Logo, alt:""},
-    {src: evapoLogo, alt:""},
+    // {src: epcBanner2Logo, alt:""},
+    // {src: epcBanner3Logo, alt:""},
+    // {src: evapoLogo, alt:""},
 
 
 ]
 
-// export default {images, aboutImages}
+export const millHouseImages: CustomImage[]=[
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+    {src: caneImg, alt:"Cane Loader"},
+
+]

@@ -1,123 +1,136 @@
-'use client'
-import React, { useRef } from "react";
+"use client";
 
-const ContactUs: React.FC = () => {
-  const formRef = useRef<HTMLFormElement | null>(null);
+import { formSchema } from "@/lib/schemas";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+} from "@/components/uis/card";
+import { Input } from "@/components/uis/input";
+import { Textarea } from "@/components/uis/textarea";
+import { Button } from "@/components/uis/button";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useForm } from "react-hook-form";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/uis/form";
+import { z } from "zod";
+import { send } from "@/lib/email";
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); 
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwKGpziaDcFTaI_R_A-GjiHxD0ZHmhXW9OlfPfxk6dcYtwnBj0sOjk5jKVwZUklgxK2aA/exec";
+export default function ContactForm() {
+  const form = useForm<z.infer<typeof formSchema>>({
+    resolver: zodResolver(formSchema),
+    defaultValues: {
+      fullName: "",
+      phone: "",
+      email: "",
+      message: "",
+    },
+  });
 
-    try {
-      if (!formRef.current) {
-        console.error("Form reference is not available");
-        return;
-      }
-
-      const form = formRef.current;
-      const formData = new FormData(form);
-
-      const response = await fetch(scriptURL, {
-        method: "POST",
-        body: formData,
-      });
-
-      if (response.ok) {
-        alert("Thank you for contacting us!");
-        console.log(response);
-        
-        form.reset();
-      } else {
-        alert("Failed to submit. Please try again.");
-      }
-    } catch (error) {
-      if (error instanceof Error) {
-        console.error("Error!", error.message);
-        alert("An error occurred while submitting the form. Please try again.");
-      } else {
-        console.error("Unknown error occurred", error);
-      }
-    }
-  };
+  function onSubmit(values: z.infer<typeof formSchema>) {
+    send(values);
+    console.log(values);
+  }
 
   return (
-    <>
-      <section className="flex flex-col items-center justify-center bg-gray-50 py-12 px-6">
-        <div className="max-w-3xl w-full bg-white rounded-lg shadow-lg p-8">
-          <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
-            Contact Us
-          </h2>
-          <form
-            ref={formRef}
-            onSubmit={handleSubmit}
-            className="space-y-6"
-          >
-            <div>
-              <label htmlFor="name" className="block text-gray-600 mb-2">
-                Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                placeholder="Your Name"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
+    <Card className="mt-8 mx-4 max-w-4xl w-full m-0 p-2 md:p-6 lg:p-8">
+      <CardHeader>
+        <CardTitle className="text-3xl">Contact Us</CardTitle>
+        <CardDescription className="text-lg">
+          Fill out the form below and we&apos;ll get back to you as soon as possible.
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <Form {...form}>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
+              <FormField
+                control={form.control}
+                name="fullName"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-2xl font-semibold">
+                      Full Name
+                    </FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your Name" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <div>
-              <label htmlFor="phone" className="block text-gray-600 mb-2">
-                Phone Number
-              </label>
-              <input
-                type="tel"
+              <FormField
+                control={form.control}
                 name="phone"
-                id="phone"
-                placeholder="Your Phone Number"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-2xl font-semibold">
+                      Phone Number
+                    </FormLabel>
+                    <FormControl>
+                      <Input
+                        placeholder="Phone Number"
+                        type="number"
+                        className="text-xl appearance-none [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none [&[type=number]]:appearance-textfield"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <div>
-              <label htmlFor="email" className="block text-gray-600 mb-2">
-                Email
-              </label>
-              <input
-                type="email"
+              <FormField
+                control={form.control}
                 name="email"
-                id="email"
-                placeholder="Your Email"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel className="text-2xl font-semibold">
+                      Email
+                    </FormLabel>
+                    <FormControl>
+                      <Input placeholder="Your Email" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
-            </div>
-            <div>
-              <label htmlFor="message" className="block text-gray-600 mb-2">
-                Message
-              </label>
-              <textarea
+              <FormField
+                control={form.control}
                 name="message"
-                id="message"
-                rows={7}
-                placeholder="Your Message"
-                className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-orange-400"
-                required
-              ></textarea>
-            </div>
-            <div className="text-center">
-              <input
-                type="submit"
-                value="Submit"
-                id="submit"
-                className="px-6 py-3 bg-orange-400 text-white font-semibold rounded-md shadow-md hover:bg-orange-500 transition-all duration-300 cursor-pointer"
+                render={({ field }) => (
+                  <FormItem className="md:col-span-2">
+                    <FormLabel className="text-2xl font-semibold">
+                      Message
+                    </FormLabel>
+                    <FormControl>
+                      <Textarea
+                        id="message"
+                        placeholder="Type in your message here"
+                        className="min-h-[120px]"
+                        {...field}
+                      />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
               />
             </div>
+            <Button
+              type="submit"
+              className="bg-orange-200 text-black text-md block ml-auto mr-auto font-semibold">
+              Submit
+            </Button>
           </form>
-        </div>
-      </section>
-    </>
+        </Form>
+      </CardContent>
+    </Card>
   );
-};
-
-export default ContactUs;
+}

@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Cursor from "@/components/Cursor";
 import Footer from "@/components/Footer";
 
-// const roboto = Roboto({
+// const smooch = Roboto({
 //   weight: ["400", "700"],
 //   subsets: ["latin"],
 //   display: "swap",
@@ -17,12 +17,12 @@ const smooch = Smooch_Sans({
   subsets : ["latin"],
 })
 
-// const most = Montserrat({
+// const smooch = Montserrat({
 //   subsets:['latin']
 // })
 
 export const metadata: Metadata = {
-  title: "Apex Engineering Technology",
+  title: "Abhishek Engg Works",
   description: "One stop Solution",
 };
 
