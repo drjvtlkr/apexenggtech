@@ -46,8 +46,12 @@ const Navbar = () => {
           </div>
           <div>
             📧{" "}
-            <a href="mailto:info@example.com" className="hover:text-orange-400 text-lg">
-              info@example.com
+            <a href="mailto:abhishengg@gmail.com " className="hover:text-orange-400 text-lg">
+              abhishengg@gmail.com
+            </a>
+            <span className="mx-2">/</span>
+            <a href="mailto:abhishekengg.dwd@gmail.com" className="hover:text-orange-400 text-lg ">
+              abhishekengg.dwd@gmail.com
             </a>
           </div>
         </div>
@@ -107,76 +111,65 @@ const Navbar = () => {
           <div className="hidden lg:flex lg:space-x-14 lg:mx-10">
             <Link href="/" passHref>
               <ul
-                className={`relative group ${
-                  isActive("/") ? "text-orange-500" : "text-gray-400"
-                }`}>
-                <span
-                  className={`text-3xl font-semibold transition duration-300 ${
-                    isActive("/") ? "" : "group-hover:text-orange-500"
+                className={`relative group ${isActive("/") ? "text-orange-500" : "text-gray-400"
                   }`}>
+                <span
+                  className={`text-3xl font-semibold transition duration-300 ${isActive("/") ? "" : "group-hover:text-orange-500"
+                    }`}>
                   Home
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
-                    isActive("/")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                  } transition-transform duration-300 origin-left`}></span>
+                    } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
 
             <Link href="/about" passHref>
               <ul
-                className={`relative group ${
-                  isActive("/about") ? "text-orange-500" : "text-gray-400"
-                }`}>
-                <span
-                  className={`text-3xl font-semibold transition duration-300 ${
-                    isActive("/about") ? "" : "group-hover:text-orange-500"
+                className={`relative group ${isActive("/about") ? "text-orange-500" : "text-gray-400"
                   }`}>
+                <span
+                  className={`text-3xl font-semibold transition duration-300 ${isActive("/about") ? "" : "group-hover:text-orange-500"
+                    }`}>
                   About Us
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
-                    isActive("/about")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/about")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                  } transition-transform duration-300 origin-left`}></span>
+                    } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
 
             <Link href="/products" passHref>
               <ul
-                className={`relative group ${
-                  isActive("/products") ? "text-orange-500" : "text-gray-400"
-                }`}>
-                <span
-                  className={`text-3xl font-semibold transition duration-300 ${
-                    isActive("/products") ? "" : "group-hover:text-orange-500"
+                className={`relative group ${isActive("/products") ? "text-orange-500" : "text-gray-400"
                   }`}>
+                <span
+                  className={`text-3xl font-semibold transition duration-300 ${isActive("/products") ? "" : "group-hover:text-orange-500"
+                    }`}>
                   Our Products
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
-                    isActive("/products")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/products")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                  } transition-transform duration-300 origin-left`}></span>
+                    } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
           </div>
 
           {/* Mobile Dropdown */}
           <div
-            className={`${
-              menuOpen ? "max-h-screen" : "max-h-0"
-            } overflow-hidden lg:hidden absolute top-full left-0 w-full bg-transparent shadow-md transition-all duration-500`}>
+            className={`${menuOpen ? "max-h-screen" : "max-h-0"
+              } overflow-hidden lg:hidden absolute top-full left-0 w-full bg-transparent shadow-md transition-all duration-500`}>
             <div className="flex flex-col space-y-5 p-5">
               <Link href="/" passHref>
                 <ul
-                  className={`relative group ${
-                    isActive("/") ? "text-orange-500" : "text-black"
-                  }`}>
+                  className={`relative group ${isActive("/") ? "text-orange-500" : "text-black"
+                    }`}>
                   <span className="text-xl font-semibold group-hover:text-black transition duration-500">
                     Home
                   </span>
@@ -184,9 +177,8 @@ const Navbar = () => {
               </Link>
               <Link href="/about" passHref>
                 <ul
-                  className={`relative group ${
-                    isActive("/about") ? "text-orange-500" : "text-black"
-                  }`}>
+                  className={`relative group ${isActive("/about") ? "text-orange-500" : "text-black"
+                    }`}>
                   <span className="text-xl font-semibold group-hover:text-black transition duration-500">
                     About Us
                   </span>
@@ -194,9 +186,8 @@ const Navbar = () => {
               </Link>
               <Link href="/products" passHref>
                 <ul
-                  className={`relative group ${
-                    isActive("/products") ? "text-orange-500" : "text-black"
-                  }`}>
+                  className={`relative group ${isActive("/products") ? "text-orange-500" : "text-black"
+                    }`}>
                   <span className="text-xl font-semibold group-hover:text-black transition duration-500">
                     Our Products
                   </span>
