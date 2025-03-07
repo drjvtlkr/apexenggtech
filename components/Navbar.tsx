@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import abhiLogo from "@/images/apex.png";
-import abhi from "@/images/AbhishEngg.png"
+import abhi from "@/images/AbhishEngg.png";
 import { usePathname } from "next/navigation";
 
 const Navbar = () => {
@@ -37,20 +37,27 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-start gap-5 items-center w-full bg-gray-900 text-white px-10 py-2 text-sm">
           <div>
             📞{" "}
-            <a href="tel:+1234567890" className="hover:text-orange-400 text-lg">
-              +91 6362593889
+            <a href="tel:+919880954260" className="hover:text-orange-400 text-lg">
+              +91 9880954260
             </a>
           </div>
-          <div>
-            |
-          </div>
+          <strong>
+            <span className="text-bold">|</span>
+          </strong>
+
           <div>
             📧{" "}
-            <a href="mailto:abhishengg@gmail.com " className="hover:text-orange-400 text-lg">
+            <a
+              href="mailto:abhishengg@gmail.com "
+              className="hover:text-orange-400 text-lg">
               abhishengg@gmail.com
             </a>
-            <span className="mx-2">/</span>
-            <a href="mailto:abhishekengg.dwd@gmail.com" className="hover:text-orange-400 text-lg ">
+            <strong>
+              <span className="mx-2 text-bold">|</span>
+            </strong>
+            <a
+              href="mailto:abhishekengg.dwd@gmail.com"
+              className="hover:text-orange-400 text-lg ">
               abhishekengg.dwd@gmail.com
             </a>
           </div>
@@ -111,65 +118,76 @@ const Navbar = () => {
           <div className="hidden lg:flex lg:space-x-14 lg:mx-10">
             <Link href="/" passHref>
               <ul
-                className={`relative group ${isActive("/") ? "text-orange-500" : "text-gray-400"
-                  }`}>
+                className={`relative group ${
+                  isActive("/") ? "text-orange-500" : "text-gray-400"
+                }`}>
                 <span
-                  className={`text-3xl font-semibold transition duration-300 ${isActive("/") ? "" : "group-hover:text-orange-500"
-                    }`}>
+                  className={`text-3xl font-semibold transition duration-300 ${
+                    isActive("/") ? "" : "group-hover:text-orange-500"
+                  }`}>
                   Home
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
+                    isActive("/")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                    } transition-transform duration-300 origin-left`}></span>
+                  } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
 
             <Link href="/about" passHref>
               <ul
-                className={`relative group ${isActive("/about") ? "text-orange-500" : "text-gray-400"
-                  }`}>
+                className={`relative group ${
+                  isActive("/about") ? "text-orange-500" : "text-gray-400"
+                }`}>
                 <span
-                  className={`text-3xl font-semibold transition duration-300 ${isActive("/about") ? "" : "group-hover:text-orange-500"
-                    }`}>
+                  className={`text-3xl font-semibold transition duration-300 ${
+                    isActive("/about") ? "" : "group-hover:text-orange-500"
+                  }`}>
                   About Us
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/about")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
+                    isActive("/about")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                    } transition-transform duration-300 origin-left`}></span>
+                  } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
 
             <Link href="/products" passHref>
               <ul
-                className={`relative group ${isActive("/products") ? "text-orange-500" : "text-gray-400"
-                  }`}>
+                className={`relative group ${
+                  isActive("/products") ? "text-orange-500" : "text-gray-400"
+                }`}>
                 <span
-                  className={`text-3xl font-semibold transition duration-300 ${isActive("/products") ? "" : "group-hover:text-orange-500"
-                    }`}>
+                  className={`text-3xl font-semibold transition duration-300 ${
+                    isActive("/products") ? "" : "group-hover:text-orange-500"
+                  }`}>
                   Our Products
                 </span>
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${isActive("/products")
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-orange-500 transform ${
+                    isActive("/products")
                       ? "scale-x-100"
                       : "scale-x-0 group-hover:scale-x-100"
-                    } transition-transform duration-300 origin-left`}></span>
+                  } transition-transform duration-300 origin-left`}></span>
               </ul>
             </Link>
           </div>
 
           {/* Mobile Dropdown */}
           <div
-            className={`${menuOpen ? "max-h-screen" : "max-h-0"
-              } overflow-hidden lg:hidden absolute top-full left-0 w-full bg-transparent shadow-md transition-all duration-500`}>
+            className={`${
+              menuOpen ? "max-h-screen" : "max-h-0"
+            } overflow-hidden lg:hidden absolute top-full left-0 w-full bg-transparent shadow-md transition-all duration-500`}>
             <div className="flex flex-col space-y-5 p-5">
               <Link href="/" passHref>
                 <ul
-                  className={`relative group ${isActive("/") ? "text-orange-500" : "text-blue-400"
-                    }`}>
+                  className={`relative group ${
+                    isActive("/") ? "text-orange-500" : "text-blue-400"
+                  }`}>
                   <span className="text-xl font-semibold transition duration-500">
                     Home
                   </span>
@@ -177,8 +195,9 @@ const Navbar = () => {
               </Link>
               <Link href="/about" passHref>
                 <ul
-                  className={`relative group ${isActive("/about") ? "text-orange-500" : "text-blue-400"
-                    }`}>
+                  className={`relative group ${
+                    isActive("/about") ? "text-orange-500" : "text-blue-400"
+                  }`}>
                   <span className="text-xl font-semibold transition duration-500">
                     About Us
                   </span>
@@ -186,8 +205,9 @@ const Navbar = () => {
               </Link>
               <Link href="/products" passHref>
                 <ul
-                  className={`relative group ${isActive("/products") ? "text-orange-500" : "text-blue-400"
-                    }`}>
+                  className={`relative group ${
+                    isActive("/products") ? "text-orange-500" : "text-blue-400"
+                  }`}>
                   <span className="text-xl font-semibold transition duration-500">
                     Our Products
                   </span>
