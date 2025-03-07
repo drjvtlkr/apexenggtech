@@ -104,7 +104,7 @@ const Home = () => {
           <Services />
         </div>
 
-        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full h-screen">
+        <section id="contactus" className="flex flex-col justify-center items-center sm:mt-24 p-4 w-full">
           <ContactForm />
         </section>
       </div>
