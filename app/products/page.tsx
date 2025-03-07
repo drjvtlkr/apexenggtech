@@ -53,9 +53,22 @@ const Products: React.FC = () => {
 
       <ProductSection
         title="MILL HOUSE EQUIPMENTS"
-        items={["Cane Unloader", "Feeder Table", "Cane Carrier", "Chopper / Leveler", "Swing Type Heavy Duty Fibrizor", "Rake Elevator / Rake Type Inter Carriers", "T.R.P.F./G.R.P.F.", "Multi Misalignment Rope Coupling", "Rotary Juice Screen", "Mill House Crane", "Bagasse Elevator", "Return Bagasse Carrier"]}
+        items={[
+          "Cane Unloader",
+          "Feeder Table",
+          "Cane Carrier",
+          "Chopper / Leveler",
+          "Swing Type Heavy Duty Fibrizor",
+          "Rake Elevator / Rake Type Inter Carriers",
+          "T.R.P.F./G.R.P.F.",
+          "Multi Misalignment Rope Coupling",
+          "Rotary Juice Screen",
+          "Mill House Crane",
+          "Bagasse Elevator",
+          "Return Bagasse Carrier",
+        ]}
         imgSrc={ffeImg.src}
-        bgColor="bg-gradient-to-r from-[#F0F4F8] to-[#DCE7F2]"
+        bgColor="bg-[#F0F4F8]"
         icon={<FaIndustry />}
       />
 
@@ -74,11 +87,10 @@ const Products: React.FC = () => {
           "Air / Water Cooled Crystallizer",
           "Pug Mill / Magma Mixers",
           "Molasses Conditioners - Conventional & DCH Type",
-          "Sugar Melters - Vertical / Horizontal Type"
+          "Sugar Melters - Vertical / Horizontal Type",
         ]}
-
         imgSrc={verticalImg.src}
-        bgColor="bg-gradient-to-r from-[#D9EAFD] to-[#B3DAFC]"
+        bgColor="bg-[#D9EAFD]"
         icon={<FaCogs />}
         reverse
       />
@@ -93,11 +105,10 @@ const Products: React.FC = () => {
           "Syrup Sulphiter",
           "Continuous Sulphur Burner",
           "Juice Clarifiers - Conventional 444 and Short Retention Type (SRI)",
-          "Film Type Sulphur Burners"
+          "Film Type Sulphur Burners",
         ]}
-
         imgSrc={interImg.src}
-        bgColor="bg-gradient-to-r from-[#F5E6CC] to-[#F1D4A7]"
+        bgColor="bg-[#F5E6CC]"
         icon={<FaBoxes />}
       />
 
@@ -111,11 +122,10 @@ const Products: React.FC = () => {
           "Mechanized Sugar Handling with Sugar Bin / Silo System",
           "Portable Belt Conveyors",
           "Sugar Bag Stackers",
-          "Truck Loaders"
+          "Truck Loaders",
         ]}
-
         imgSrc={p4.src}
-        bgColor="bg-gradient-to-r from-[#E3F4E3] to-[#C8E6C9]"
+        bgColor="bg-[#E3F4E3]"
         icon={<FaCubes />}
         reverse
       />
@@ -138,24 +148,18 @@ const Products: React.FC = () => {
           "All Types of M.S. / S.S. Fabricated Tankages",
           "Molasses Storage Tanks, Fermentation / Distillation Tanks",
           "Shell & Tube Type Heat Exchangers",
-          "Bio-Gas Plants & Spent Wash Evaporation System"
+          "Bio-Gas Plants & Spent Wash Evaporation System",
         ]}
-
         imgSrc={p5.src}
-        bgColor="bg-gradient-to-r from-[#F5E6CC] to-[#F1D4A7]"
+        bgColor="bg-[#FCE4EC]"
         icon={<FaBoxes />}
       />
 
       <ProductSection
         title="BULK MATERIAL HANDLING SYSTEMS WITH EQUIPMENTS"
-        items={[
-          "Bagasse Handling System",
-          "Coal Handling System",
-          "Ash Handling System",
-        ]}
-
+        items={["Bagasse Handling System", "Coal Handling System", "Ash Handling System"]}
         imgSrc={p6.src}
-        bgColor="bg-gradient-to-r from-[#E3F4E3] to-[#C8E6C9]"
+        bgColor="bg-[#EAEAEA]"
         icon={<FaCubes />}
         reverse
       />
