@@ -24,32 +24,37 @@ const About = () => {
     <>
       <AboutCarousel />
 
-      <section className="mt-12 ">
-        <div className="h-screen mb-32 lg:mb-10">
-        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-800">
-          Who We Are?
-        </h2>
-          <div className="flex flex-col lg:flex-row items-center gap-10 bg-[#111828] p-8 rounded">
-            <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
+      <section className="">
+
+        <div className="h-full">
+          <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold text-white bg-[#111828] pt-12">
+            Who We Are?
+          </h2>
+
+          <div className="flex flex-col lg:flex-row items-center gap-10  p-6 md:p-8 lg:p-12 bg-[#111828] w-full min-h-full">
+            {/* Image Section */}
+            <div className="group w-full lg:w-1/2 h-72 md:h-96 lg:h-[500px] relative overflow-hidden rounded-lg">
               <Image
                 src={ffeImg.src}
                 alt="About Us"
+                width={600}
+                height={400}
                 className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
-                layout="fill"
               />
             </div>
 
+            {/* Text Section */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
                 It&apos;s a great pleasure to introduce our organization
                 <strong> Abhishek Engg Works (AEW)</strong>, a latest design and
                 technology-oriented company situated in Dharwad. We specialize
                 in manufacturing and supplying world-class equipment for Sugar
                 Plant, Jaggery Plant, and Allied industries.
               </p>
-              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
+              <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
                 Founded in 2012, our mission is to provide energy-efficient,
-                reliable, and innovative solutions to Sugar Plant, Jaggery Plant
+                reliable, and innovative solutions to Sugar Plant, Jaggery Plant,
                 and Allied industries. Our ability to fabricate, erect and
                 commission a complete sugar plant with intelligent design and
                 precision contract manufacturing, maximizes prosperity for our
@@ -59,55 +64,29 @@ const About = () => {
           </div>
         </div>
 
-        {/* <div className="flex flex-col lg:flex-row items-center mt-8 mb-8 gap-10 h-screen bg-gray-200 p-4 rounded-lg">
-        <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
-              <Image
-                src={ffeImg.src}
-                alt="About Us"
-                className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
-                layout="fill"
-              />
-            </div>
+        <div className="min-h-screen">
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 min-h-screen bg-[#1E2A38] p-8">
 
-            <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed">
-                It’s a great pleasure to introduce our organization
-                <strong> Abhishek Engg Works (AEW)</strong>, a latest design and
-                technology-oriented company situated in Dharwad. We specialize
-                in manufacturing and supplying world-class equipment for Sugar
-                Plant, Jaggery Plant, and Allied industries.
-              </p>
-              <p className="text-gray-700 text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
-                Founded in 2012, our mission is to provide energy-efficient,
-                reliable, and innovative solutions to Sugar Plant, Jaggery Plant
-                and Allied industries. Our ability to fabricate, erect and
-                commission a complete sugar plant with intelligent design and
-                precision contract manufacturing, maximizes prosperity for our
-                clients and enables better products, performance, and quality.
-              </p>
-            </div>
-        </div> */}
-
-        <div className="h-screen mb-32 lg:mb-10">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 h-screen bg-[#283136] mt-96 md:mt-20 lg:-mt-32 p-8 rounded-lg">
-            <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
+            {/* Image Section */}
+            <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
               <Image
                 src={verticalImg.src}
                 alt="About Us"
+                fill
                 className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
-                layout="fill"
               />
             </div>
 
+            {/* Text Section */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
+              <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
                 <strong>
                   AEW is located in the Belur Industrial Area of Dharwad,
                   Karnataka, strategically positioned along the Golden
                   Quadrilateral Road (NH4).
                 </strong>{" "}
                 <br />
-                This Prime location offers excellent infrastructure, including
+                This prime location offers excellent infrastructure, including
                 access to reliable water, power, skilled and unskilled labor, as
                 well as efficient transport and communication networks.
                 Additionally, our location benefits from various fiscal
@@ -115,49 +94,59 @@ const About = () => {
                 ideal base for growth and development.
               </p>
             </div>
+
           </div>
         </div>
-        <div className="flex flex-col lg:flex-row items-center mt-8 gap-10 h-screen bg-[#111828] p-4 rounded-lg">
-          <div className="group w-full lg:w-1/2 h-96 lg:h-[500px] relative overflow-hidden">
+
+        <div className="flex flex-col lg:flex-row items-center gap-10 min-h-screen bg-[#111828] p-6 md:p-8 lg:p-12">
+
+          {/* Image Section */}
+          <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
             <Image
               src={interImg.src}
               alt="About Us"
+              fill
               className="rounded-lg shadow-md object-cover transform transition-transform duration-500 group-hover:scale-105"
-              layout="fill"
             />
           </div>
 
+          {/* Text Section */}
           <div className="w-full lg:w-1/2 flex flex-col justify-center">
-            <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed">
+            <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
               The company is equipped with cutting-edge infrastructure and
               advanced machinery, ensuring the design and production of
               high-performance, heavy-duty equipment with unmatched precision
               and reliability.
             </p>
-            <p className="text-white text-lg md:text-xl lg:text-4xl leading-relaxed mt-4">
-              The total factory area is <strong>7300 Sq. Mtr </strong> and
-              Workshop Shed Area:{" "}
-              <strong>30 Mtr long x 16 Mtr. wide x 8.00 Mtr.</strong> Crane
+            <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
+              The total factory area is <strong>7300 Sq. Mtr</strong>, and
+              Workshop Shed Area: <strong>30 Mtr long x 16 Mtr wide x 8.00 Mtr</strong> Crane
               Level.
             </p>
           </div>
+
         </div>
       </section>
 
-      <section className="h-screen flex flex-col justify-center mt-20  items-center p-8 bg-[#D9EAFD]">
-        <h2 className="w-full text-center rainbow-underline text-2xl md:text-3xl lg:text-5xl font-bold mb-6 text-gray-800">
+      <section className="min-h-screen flex flex-col justify-center items-center p-8 bg-[#D9EAFD]">
+        <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-10 text-gray-800">
           Leading with Vision
         </h2>
 
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 h-9/10 w-9/10 max-w-6xl ">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-6xl">
+
+          {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
-            <Image
-              src={mdImg}
-              alt="Md"
-              className="rounded-lg md:rounded-xl mt-20 lg:mt-0 w-2/3 object-cover md:h-full md:w-full lg:h-full lg:w-full transform transition-transform duration-500 group-hover:scale-105"
-            />
+            <div className="relative w-2/3 md:w-full lg:w-full h-auto md:h-[450px] lg:h-[500px] overflow-hidden">
+              <Image
+                src={mdImg}
+                alt="Md"
+                className="rounded-lg md:rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
           </div>
 
+          {/* Text Section */}
           <div className="w-full md:w-1/2 flex flex-col justify-center items-center">
             <h3 className="text-xl md:text-2xl font-bold mb-2">
               Mr. V M Kamatar
@@ -179,10 +168,11 @@ const About = () => {
               Innovation, and Excellence.
             </p>
           </div>
+
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center mt-12 p-8 bg-[#202938]  text-white">
+      <section className="flex flex-col md:flex-row items-center  p-8 bg-[#202938]  text-white">
         <div className="flex flex-col justify-center items-center flex-1 p-8">
           <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
             Quality
@@ -224,9 +214,9 @@ const About = () => {
         </div>
       </section>
 
-      <section className="mt-12 p-8 bg-[#111828] min-h-screen flex flex-col justify-center">
-        <h2 className="w-full rainbow-underline text-center text-2xl md:text-3xl lg:text-5xl font-bold mb-4 text-gray-50">
-          Why Trust ABHISHEK ENGG WORKS with Your Project Needs?
+      <section className="p-8 bg-[#111828] min-h-screen flex flex-col justify-center">
+        <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold py-8 text-gray-50">
+          Why Trust ABHISHEK ENGG WORKS With Your Project Needs?
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 h-full">
@@ -311,7 +301,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="flex justify-center mt-12 p-8 bg-gray-50">
+      <section className="flex justify-center p-8 bg-gray-50">
         <Link href="/#contactus">
           <Button className="bg-[#1d8cc5] w-52 h-12 text-4xl hover:bg-orange-300 hover:text-black">
             Contact us
