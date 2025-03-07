@@ -6,6 +6,7 @@ import interImg from "@/images/milkOfLimeTank.jpg";
 import p4 from "@/images/p4.jpg";
 import contVacPan from "@/images/continuousVacuumPan.jpg";
 import bagasseBeltCon from "@/images/bagasseBeltConveyor.jpg";
+import { OurProductCarousel } from "@/components/OurProductsCarousel";
 
 const Products = () => {
   return (
@@ -210,7 +211,36 @@ const Products = () => {
           </div>
         </div>
       </section>
-      {/* here please add images as per products page doc, and a button to redirect to contactus section */}
+      <div className="bg-[#111828] p-8 w-full">
+        {/* <div className="relative flex overflow-x-hidden text-white">
+          <div className="py-4 animate-marquee whitespace-nowrap">
+            <h2 className="text-white text-xl md:text-2xl lg:text-4xl tracking-widest font-bold mx-4">
+              MODERNISATION & EFFICIENT ENGG, LAYOUT TO SUIT SUGAR PLANT. WE
+              UNDERTAKE COMPLETE SUGAR PLANT ON TURNKEY BASIS. COMPLETE SUGAR
+              REFINERY PLANT ON TURN-KEY BASIS. SYRUP/ MELT CLARIFICATION
+              SYSTEMS
+            </h2>
+          </div>
+          <div className="absolute top-0 py-4 animate-marquee2 whitespace-nowrap">
+            <h2 className="text-white text-xl md:text-2xl lg:text-4xl tracking-widest font-bold mx-4">
+              MODERNISATION & EFFICIENT ENGG, LAYOUT TO SUIT SUGAR PLANT. WE
+              UNDERTAKE COMPLETE SUGAR PLANT ON TURNKEY BASIS. COMPLETE SUGAR
+              REFINERY PLANT ON TURN-KEY BASIS. SYRUP/ MELT CLARIFICATION
+              SYSTEMS
+            </h2>
+          </div>
+        </div> */}
+        <h2 className="text-white tracking-wider flex justify-center text-center items-center font-sans text-xl pb-8">
+          <strong>
+            MODERNISATION & EFFICIENT ENGG, LAYOUT TO SUIT SUGAR PLANT WE
+            UNDERTAKE COMPLETE SUGAR PLANT ON TURNKEY BASIS COMPLETE SUGAR
+            REFINERY PLANT ON TURN-KEY BASIS, LIKE SYRUP/ MELT CLARIFICATION
+            SYSTEM
+          </strong>
+        </h2>
+
+        <OurProductCarousel />
+      </div>
     </>
   );
 };

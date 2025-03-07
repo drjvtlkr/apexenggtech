@@ -168,27 +168,27 @@ const Navbar = () => {
             <div className="flex flex-col space-y-5 p-5">
               <Link href="/" passHref>
                 <ul
-                  className={`relative group ${isActive("/") ? "text-orange-500" : "text-black"
+                  className={`relative group ${isActive("/") ? "text-orange-500" : "text-blue-400"
                     }`}>
-                  <span className="text-xl font-semibold group-hover:text-black transition duration-500">
+                  <span className="text-xl font-semibold transition duration-500">
                     Home
                   </span>
                 </ul>
               </Link>
               <Link href="/about" passHref>
                 <ul
-                  className={`relative group ${isActive("/about") ? "text-orange-500" : "text-black"
+                  className={`relative group ${isActive("/about") ? "text-orange-500" : "text-blue-400"
                     }`}>
-                  <span className="text-xl font-semibold group-hover:text-black transition duration-500">
+                  <span className="text-xl font-semibold transition duration-500">
                     About Us
                   </span>
                 </ul>
               </Link>
               <Link href="/products" passHref>
                 <ul
-                  className={`relative group ${isActive("/products") ? "text-orange-500" : "text-black"
+                  className={`relative group ${isActive("/products") ? "text-orange-500" : "text-blue-400"
                     }`}>
-                  <span className="text-xl font-semibold group-hover:text-black transition duration-500">
+                  <span className="text-xl font-semibold transition duration-500">
                     Our Products
                   </span>
                 </ul>
