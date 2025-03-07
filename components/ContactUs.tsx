@@ -43,9 +43,10 @@ export default function ContactForm() {
   return (
     <Card className="mt-8 mx-4 max-w-4xl w-full m-0 p-2 md:p-6 lg:p-8">
       <CardHeader>
-        <CardTitle className="text-3xl">Contact Us</CardTitle>
-        <CardDescription className="text-lg">
-          Fill out the form below and we&apos;ll get back to you as soon as possible.
+        <CardTitle className="text-3xl text-center">Contact Us</CardTitle>
+        <CardDescription className="text-lg text-center">
+          Fill out the form below and we&apos;ll get back to you as soon as
+          possible.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -123,11 +124,13 @@ export default function ContactForm() {
                 )}
               />
             </div>
-            <Button
-              type="submit"
-              className="bg-orange-200 text-black text-md block ml-auto mr-auto font-semibold">
-              Submit
-            </Button>
+            <div className="flex justify-center items-center">
+              <Button
+                type="submit"
+                className="bg-[#1d8bc7] text-white text-md hover:bg-orange-200 hover text-black font-semibold">
+                Submit
+              </Button>
+            </div>
           </form>
         </Form>
       </CardContent>
