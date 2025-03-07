@@ -140,8 +140,8 @@ const About = () => {
             <div className="relative w-2/3 md:w-full lg:w-full h-auto md:h-[450px] lg:h-[500px] overflow-hidden">
               <Image
                 src={mdImg}
-                alt="Md"
-                className="rounded-lg md:rounded-xl object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-105"
+                alt="MD "
+                className="rounded-lg md:rounded-xl object-cover w-full h-full transform transition-transform duration-500 hover:scale-105"
               />
             </div>
           </div>
