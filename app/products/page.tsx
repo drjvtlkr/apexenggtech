@@ -19,9 +19,19 @@ interface ProductSectionProps {
   reverse?: boolean;
 }
 
-const ProductSection: React.FC<ProductSectionProps> = ({ title, items, imgSrc, bgColor, icon, reverse = false }) => {
+const ProductSection: React.FC<ProductSectionProps> = ({
+  title,
+  items,
+  imgSrc,
+  bgColor,
+  icon,
+  reverse = false,
+}) => {
   return (
-    <section className={`min-h-screen flex flex-col lg:flex-row ${reverse ? "lg:flex-row-reverse" : ""} items-center gap-10 p-8 ${bgColor}`}>
+    <section
+      className={`min-h-screen flex flex-col lg:flex-row ${
+        reverse ? "lg:flex-row-reverse" : ""
+      } items-center gap-10 p-8 ${bgColor}`}>
       <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
         <Image
           src={imgSrc}
@@ -34,7 +44,9 @@ const ProductSection: React.FC<ProductSectionProps> = ({ title, items, imgSrc, b
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <div className="flex items-center gap-4">
           <span className="text-4xl text-gray-700">{icon}</span>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">{title}</h3>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+            {title}
+          </h3>
         </div>
         <ul className="list-disc pl-5 text-gray-700 text-lg md:text-xl lg:text-2xl space-y-2 mt-4">
           {items.map((item, index) => (
@@ -159,7 +171,11 @@ const Products: React.FC = () => {
 
       <ProductSection
         title="BULK MATERIAL HANDLING SYSTEMS WITH EQUIPMENTS"
-        items={["Bagasse Handling System", "Coal Handling System", "Ash Handling System"]}
+        items={[
+          "Bagasse Handling System",
+          "Coal Handling System",
+          "Ash Handling System",
+        ]}
         imgSrc={p6.src}
         bgColor="bg-[#EAEAEA]"
         icon={<FaCubes />}
@@ -167,8 +183,10 @@ const Products: React.FC = () => {
       />
 
       <div className="flex justify-center py-12">
-        <Link href="/#contactus" className="px-8 py-4 bg-blue-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">
-        REQUEST FOR A QUOTE 
+        <Link
+          href="/#contactus"
+          className="px-8 py-4 bg-blue-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">
+          REQUEST FOR A QUOTE
         </Link>
       </div>
     </>
