@@ -181,6 +181,10 @@ const Products: React.FC = () => {
         icon={<FaCubes />}
         reverse
       />
+      <div className="p-8 bg-[#111828]">
+        <h3 className="text-center p-4 text-white font-sans font-medium">SOME OF OUR  BEST PRODUCTS</h3>
+        <OurProductCarousel/>
+      </div>
 
       <div className="flex justify-center py-12">
         <Link
