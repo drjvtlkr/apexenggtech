@@ -3,7 +3,7 @@ import Image from "next/image";
 import AboutCarousel from "@/components/AboutCarousel";
 import ffeImg from "@/images/welding.jpg";
 import verticalImg from "@/images/MetalFabricationIllinoi.jpg";
-import interImg from "@/images/fabricationManufacturers.jpg";
+import interImg from "@/images/Industrial-Manufacturing-Engineering-Technician-Technical-Diploma.jpg";
 import mdImg from "@/images/MDSir .jpg";
 import {
   FaBookOpen,
