@@ -25,13 +25,12 @@ const About = () => {
       <AboutCarousel />
 
       <section className="">
-
-        <div className="h-full">
-          <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold text-white bg-[#111828] pt-12">
+        <div>
+          <h2 className="w-full text-center text-2xl md:text-3xl lg:text-5xl font-bold text-white bg-[#111828] pt-4">
             Who We Are?
           </h2>
 
-          <div className="flex flex-col lg:flex-row items-center gap-10  p-6 md:p-8 lg:p-12 bg-[#111828] w-full min-h-full">
+          <div className="flex flex-col lg:flex-row items-center gap-10 p-6 md:p-8 lg:p-12 bg-[#111828] w-full">
             {/* Image Section */}
             <div className="group w-full lg:w-1/2 h-72 md:h-96 lg:h-[500px] relative overflow-hidden rounded-lg">
               <Image
@@ -54,19 +53,19 @@ const About = () => {
               </p>
               <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
                 Founded in 2012, our mission is to provide energy-efficient,
-                reliable, and innovative solutions to Sugar Plant, Jaggery Plant,
-                and Allied industries. Our ability to fabricate, erect and
-                commission a complete sugar plant with intelligent design and
-                precision contract manufacturing, maximizes prosperity for our
-                clients and enables better products, performance, and quality.
+                reliable, and innovative solutions to Sugar Plant, Jaggery
+                Plant, and Allied industries. Our ability to fabricate, erect,
+                and commission a complete sugar plant with intelligent design
+                and precision contract manufacturing, maximizes prosperity for
+                our clients and enables better products, performance, and
+                quality.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="min-h-screen">
-          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 min-h-screen bg-[#1E2A38] p-8">
-
+        <div>
+          <div className="flex flex-col lg:flex-row-reverse items-center gap-10 bg-white p-8">
             {/* Image Section */}
             <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
               <Image
@@ -79,7 +78,7 @@ const About = () => {
 
             {/* Text Section */}
             <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed">
+              <p className="text-black text-lg md:text-xl lg:text-2xl leading-relaxed">
                 <strong>
                   AEW is located in the Belur Industrial Area of Dharwad,
                   Karnataka, strategically positioned along the Golden
@@ -94,12 +93,10 @@ const About = () => {
                 ideal base for growth and development.
               </p>
             </div>
-
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center gap-10 min-h-screen bg-[#111828] p-6 md:p-8 lg:p-12">
-
+        <div className="flex flex-col lg:flex-row items-center gap-10 bg-[#111828] p-6 md:p-8 lg:p-12">
           {/* Image Section */}
           <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
             <Image
@@ -120,11 +117,10 @@ const About = () => {
             </p>
             <p className="text-white text-lg md:text-xl lg:text-2xl leading-relaxed mt-4">
               The total factory area is <strong>7300 Sq. Mtr</strong>, and
-              Workshop Shed Area: <strong>30 Mtr long x 16 Mtr wide x 8.00 Mtr</strong> Crane
-              Level.
+              Workshop Shed Area:{" "}
+              <strong>30 Mtr long x 16 Mtr wide x 8.00 Mtr</strong> Crane Level.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -134,7 +130,6 @@ const About = () => {
         </h2>
 
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 w-full max-w-6xl">
-
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-2/3 md:w-full lg:w-full h-auto md:h-[450px] lg:h-[500px] overflow-hidden">
@@ -156,7 +151,7 @@ const About = () => {
             </h4>
             <p className="text-md text-center lg:text-2xl">
               With over 30+ years of extensive experience in Mechanical
-              Engineering, Mr. V M Kamatar serves as Managing Director at
+              Engineering, <br/>Mr. V M Kamatar serves as Managing Director at
               Abhishek Engg Works (AEW). He has held key roles as a Design
               Manager in several prestigious Indian organizations, leading the
               design and manufacturing of cutting-edge equipment. Throughout his
@@ -168,16 +163,15 @@ const About = () => {
               Innovation, and Excellence.
             </p>
           </div>
-
         </div>
       </section>
 
-      <section className="flex flex-col md:flex-row items-center  p-8 bg-[#202938]  text-white">
+      <section className="flex flex-col md:flex-row items-center p-8 py-20 bg-[#202938]  text-white">
         <div className="flex flex-col justify-center items-center flex-1 p-8">
           <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
             Quality
           </h2>
-          <p className="text-md md:text-lg lg:text-xl leading-7">
+          <p className="text-md text-justify md:text-lg lg:text-xl leading-7">
             At AEW,{" "}
             <strong>Quality is at the heart of everything we do.</strong> We go
             beyond just meeting standards—our commitment extends to meticulous
@@ -194,7 +188,7 @@ const About = () => {
           <h2 className="text-4xl rainbow-underline mb-4 !font-bold">
             Service
           </h2>
-          <p className="text-md md:text-lg lg:text-xl leading-7">
+          <p className="text-md text-justify md:text-lg lg:text-xl leading-7">
             At AEW,{" "}
             <strong>
               {" "}

@@ -37,7 +37,9 @@ const Navbar = () => {
         <div className="hidden lg:flex justify-start gap-5 items-center w-full bg-gray-900 text-white px-10 py-2 text-sm">
           <div>
             📞{" "}
-            <a href="tel:+919880954260" className="hover:text-orange-400 text-lg">
+            <a
+              href="tel:+919880954260"
+              className="hover:text-orange-400 text-lg">
               +91 9880954260
             </a>
           </div>
@@ -65,22 +67,26 @@ const Navbar = () => {
         <div className=" bg-transparent backdrop-blur-sm text-black flex items-center justify-between p-2 transition-all duration-300 shadow-md">
           <div className="flex items-center">
             {!isShrunk ? (
+              <Link href='/'>
               <Image
                 src={abhi}
                 alt="Apex Logo"
-                className="w-[100px] h-[40px] sm:w-[150px] sm:h-[60px] md:w-[200px] md:h-[80px] lg:w-[250px] lg:h-[100px] transition-transform duration-300 ease-in-out"
+                className="w-[150px] h-[60px] sm:w-[225px] sm:h-[90px] md:w-[200px] md:h-[80px] lg:w-[250px] lg:h-[100px] transition-transform duration-300 ease-in-out"
                 style={{ transform: `scale(${scrollProgress})` }}
                 width={250}
                 height={100}
-              />
+                />
+                </Link>
             ) : (
-              <Image
-                src={abhiLogo}
-                alt="Abhi Logo"
-                className="w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] transition-opacity duration-500 ease-in-out"
-                width={40}
-                height={40}
-              />
+              <Link href="/">
+                <Image
+                  src={abhiLogo}
+                  alt="Abhi Logo"
+                  className="w-[30px] h-[30px] sm:w-[38px] sm:h-[38px] md:w-[30px] md:h-[30px] lg:w-[40px] lg:h-[40px] transition-opacity duration-500 ease-in-out"
+                  width={40}
+                  height={40}
+                />
+              </Link>
             )}
           </div>
 

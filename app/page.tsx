@@ -49,7 +49,7 @@ const Home = () => {
                 Plant Machineries & equipment’s / Jaggery Plants on Turn Key basis.
               </p>
               <div className="mt-6 flex justify-start">
-                <Button label="Explore" link="/products" />
+                <Button label="Explore" link="/about" />
               </div>
             </div>
           </div>

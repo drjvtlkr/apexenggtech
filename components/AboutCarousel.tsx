@@ -34,8 +34,8 @@ const AboutCarousel = () => {
         </CarouselContent>
       </Carousel>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center z-10 bg-black bg-opacity-50">
-        <span className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold text-center px-4">
+      <div className="absolute inset-0 flex flex-col items-center justify-center pb-60 z-10 bg-black bg-opacity-50">
+        <span className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold px-4">
           Where Innovation Sparks Precision &amp; Drives Performance
         </span>
       </div>
