@@ -7,10 +7,10 @@ import boilerLogo from "@/images/boiler-banner1.jpg"
 import boiler1Logo from "@/images/boiler-banner4.jpg"
 import boiler2Logo from "@/images/boiler-banner5.jpg"
 import boiler3Logo from "@/images/boiler-banner7.jpg"
-import epcBanerLogo from "@/images/epc_baner.jpg"
+import evapoImg from "@/images/evapourators.jpg"
 import epcBannerLogo from "@/images/epc_banner.jpg"
-import epcBanner2Logo from "@/images/epc_banner2.jpg"
-import epcBanner3Logo from "@/images/epc_banner3.jpg"
+import calImg from "@/images/calandriaEvap.jpg"
+import bioAsh from "@/images/bioAshHandling.jpg"
 import caneImg from  "@/images/Cane unloader .jpg"
 
 
@@ -28,30 +28,22 @@ export const images: CustomImage[]=[
 ]
 
 export const aboutImages:CustomImage[]=[
-    // {src: boilerLogo , alt:""},
     {src: boiler1Logo, alt:""},
     {src: boiler2Logo, alt:""},
-    // {src: boiler3Logo, alt:""},
-    // {src: epcBanerLogo, alt:""},
     {src: epcBannerLogo, alt:""},
-    // {src: epcBanner2Logo, alt:""},
-    // {src: epcBanner3Logo, alt:""},
-    // {src: evapoLogo, alt:""},
-
-
 ]
 
-export const millHouseImages: CustomImage[]=[
+export const productsImages: CustomImage[]=[
     {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
-    {src: caneImg, alt:"Cane Loader"},
+    {src: bioAsh, alt:"Bio Ash handling"},
+    {src: calImg, alt:"Calandria"},
+    {src: evapoImg, alt:"Evaporators"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
+    // {src: caneImg, alt:"Cane Loader"},
 
 ]

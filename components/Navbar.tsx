@@ -33,7 +33,6 @@ const Navbar = () => {
   return (
     <>
       <nav className="fixed top-0 w-full ">
-        {/* Contact Bar */}
         <div className="hidden lg:flex justify-start gap-5 items-center w-full bg-gray-900 text-white px-10 py-2 text-sm">
           <div>
             📞{" "}
@@ -50,7 +49,7 @@ const Navbar = () => {
           <div>
             📧{" "}
             <a
-              href="mailto:abhishengg@gmail.com "
+              href="mailto:abhishengg@gmail.com"
               className="hover:text-orange-400 text-lg">
               abhishengg@gmail.com
             </a>
@@ -59,24 +58,31 @@ const Navbar = () => {
             </strong>
             <a
               href="mailto:abhishekengg.dwd@gmail.com"
-              className="hover:text-orange-400 text-lg ">
+              className="hover:text-orange-400 text-lg">
               abhishekengg.dwd@gmail.com
             </a>
           </div>
+
+          <a
+            href="/#contactus"
+            className="ml-auto  text-white font-semibold text-2xl rounded-sm transition duration-300">
+            Contact Us
+          </a>
         </div>
+
         <div className=" bg-transparent backdrop-blur-sm text-black flex items-center justify-between p-2 transition-all duration-300 shadow-md">
           <div className="flex items-center">
             {!isShrunk ? (
-              <Link href='/'>
-              <Image
-                src={abhi}
-                alt="Apex Logo"
-                className="w-[150px] h-[60px] sm:w-[225px] sm:h-[90px] md:w-[200px] md:h-[80px] lg:w-[250px] lg:h-[100px] transition-transform duration-300 ease-in-out"
-                style={{ transform: `scale(${scrollProgress})` }}
-                width={250}
-                height={100}
+              <Link href="/">
+                <Image
+                  src={abhi}
+                  alt="Apex Logo"
+                  className="w-[150px] h-[60px] sm:w-[225px] sm:h-[90px] md:w-[200px] md:h-[80px] lg:w-[250px] lg:h-[100px] transition-transform duration-300 ease-in-out"
+                  style={{ transform: `scale(${scrollProgress})` }}
+                  width={250}
+                  height={100}
                 />
-                </Link>
+              </Link>
             ) : (
               <Link href="/">
                 <Image

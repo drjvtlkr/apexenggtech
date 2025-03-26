@@ -9,6 +9,7 @@ import p5 from "@/images/continuousVacuumPan.jpg";
 import p6 from "@/images/bagasseBeltConveyor.jpg";
 import { OurProductCarousel } from "@/components/OurProductsCarousel";
 import Link from "next/link";
+import ProductPageCarousel from "@/components/ProductPageCarousel";
 
 interface ProductSectionProps {
   title: string;
@@ -29,7 +30,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 }) => {
   return (
     <section
-      className={`min-h-screen flex flex-col lg:flex-row ${
+      className={`flex flex-col lg:flex-row ${
         reverse ? "lg:flex-row-reverse" : ""
       } items-center gap-10 p-8 ${bgColor}`}>
       <div className="group w-full lg:w-1/2 relative h-72 md:h-96 lg:h-[500px] overflow-hidden rounded-lg">
@@ -43,14 +44,14 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <div className="flex items-center gap-4">
-          <span className="text-4xl text-gray-700">{icon}</span>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+          <span className="text-4xl text-gray-500">{icon}</span>
+          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-500">
             {title}
           </h3>
         </div>
         <ul className="list-disc pl-5 text-gray-700 text-lg md:text-xl lg:text-2xl space-y-2 mt-4">
           {items.map((item, index) => (
-            <li key={index}>{item}</li>
+            <li key={index} className="text-gray-500">{item}</li>
           ))}
         </ul>
       </div>
@@ -61,7 +62,8 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 const Products: React.FC = () => {
   return (
     <>
-      <h2 className="text-center text-3xl md:text-4xl lg:text-6xl font-bold mt-12 md:mt-20 lg:mt-32 p-8 text-gray-800">
+    <ProductPageCarousel/>
+      <h2 className="text-center text-3xl md:text-4xl lg:text-6xl font-bold p-4 text-gray-800">
         Our Products
       </h2>
 
@@ -82,7 +84,7 @@ const Products: React.FC = () => {
           "Return Bagasse Carrier",
         ]}
         imgSrc={ffeImg.src}
-        bgColor="bg-[#F0F4F8]"
+        bgColor="bg-[#111828]"
         icon={<FaIndustry />}
       />
 
@@ -104,7 +106,7 @@ const Products: React.FC = () => {
           "Sugar Melters - Vertical / Horizontal Type",
         ]}
         imgSrc={verticalImg.src}
-        bgColor="bg-[#D9EAFD]"
+        bgColor="bg-[#fff]"
         icon={<FaCogs />}
         reverse
       />
@@ -122,7 +124,7 @@ const Products: React.FC = () => {
           "Film Type Sulphur Burners",
         ]}
         imgSrc={interImg.src}
-        bgColor="bg-[#F5E6CC]"
+        bgColor="bg-[#111828]"
         icon={<FaBoxes />}
       />
 
@@ -139,7 +141,7 @@ const Products: React.FC = () => {
           "Truck Loaders",
         ]}
         imgSrc={p4.src}
-        bgColor="bg-[#E3F4E3]"
+        bgColor="bg-[#fff]"
         icon={<FaCubes />}
         reverse
       />
@@ -165,7 +167,7 @@ const Products: React.FC = () => {
           "Bio-Gas Plants & Spent Wash Evaporation System",
         ]}
         imgSrc={p5.src}
-        bgColor="bg-[#FCE4EC]"
+        bgColor="bg-[#111828]"
         icon={<FaBoxes />}
       />
 
@@ -177,7 +179,7 @@ const Products: React.FC = () => {
           "Ash Handling System",
         ]}
         imgSrc={p6.src}
-        bgColor="bg-[#EAEAEA]"
+        bgColor="bg-[#fff]"
         icon={<FaCubes />}
         reverse
       />
@@ -189,7 +191,7 @@ const Products: React.FC = () => {
       <div className="flex justify-center py-12">
         <Link
           href="/#contactus"
-          className="px-8 py-4 bg-blue-600 text-white text-xl font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">
+          className="px-8 py-4 bg-blue-600 text-white text-2xl font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">
           REQUEST FOR A QUOTE
         </Link>
       </div>
