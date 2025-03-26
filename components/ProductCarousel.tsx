@@ -20,12 +20,12 @@ import image5 from "../images/p4.jpg";
 import image6 from "../images/p3.jpg";
 
 const products = [
-  { id: 1, name: "Elevating Industries with Cutting Edge Technology", image: image1 },
-  { id: 2, name: "Elevating Industries with Innovation", image: image2 },
-  { id: 3, name: "Elevating Industries with Excellent Service", image: image3 },
-  { id: 4, name: "Elevating Industries with Cutting Edge Technology", image: image4 },
-  { id: 5, name: "Elevating Industries with Innovation", image: image5 },
-  { id: 6, name: "Elevating Industries with Excellent Service", image: image6 },
+  { id: 1, name: "Intermediate Rake Type Carriers", image: image1 },
+  { id: 2, name: "Falling Film Evaporator", image: image2 },
+  { id: 3, name: "Continuous Vacuum Pan", image: image3 },
+  { id: 4, name: "Cane Unloader", image: image4 },
+  { id: 5, name: "Sugar Bag Handling System", image: image5 },
+  { id: 6, name: "Milk of Lime Tank", image: image6 },
 ];
 
 export const ProductCarousel: React.FC = () => {

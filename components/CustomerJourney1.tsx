@@ -60,24 +60,38 @@ const CustomerJourney: React.FC = () => {
     gsap.to(timeline, {
       xPercent: -50,
       repeat: -1,
-      duration: 25,
+      duration: 38,
       ease: "linear",
     });
   }, []);
 
   return (
-    <div className="relative w-full min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white py-16 px-4 overflow-hidden">
-      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-12">Customer Journey</h1>
+    <div className="relative w-full h-full flex flex-col items-center justify-center bg-gray-900 text-white py-12 md:py-16 lg:py-24 px-4 overflow-hidden">
+      <h1 className="text-center text-3xl md:text-4xl lg:text-5xl font-bold mb-12">
+        Customer Journey
+      </h1>
       <div className="relative w-full flex items-center overflow-hidden">
         <div ref={timelineRef} className="flex gap-12 w-max">
           {[...journeySteps, ...journeySteps].map((step, index) => (
             <div
               key={index}
-              className="w-[300px] md:w-[350px] lg:w-[400px] bg-white bg-opacity-10 rounded-xl p-6 shadow-lg backdrop-blur-md flex flex-col items-center text-center"
+              className="w-[300px] md:w-[350px] lg:w-[400px] bg-white bg-opacity-10 rounded-xl p-6 shadow-lg backdrop-blur-md flex flex-col items-center text-center relative"
             >
+              {/* Step Number */}
+              <span className="absolute top-2 left-2 bg-gray-800 text-white text-lg font-bold px-3 py-1 rounded-full font-sans">
+                {(index % journeySteps.length) + 1}
+              </span>
+
+              {/* Icon */}
               <div className="mb-4">{step.icon}</div>
-              <h3 className="text-3xl font-semibold">{step.title}</h3>
-              <p className="text-gray-300 mt-2 font-sans text-md">{step.description}</p>
+
+              {/* Title */}
+              <h3 className="text-2xl font-semibold">{step.title}</h3>
+
+              {/* Description */}
+              <p className="text-gray-300 mt-2 font-sans text-md">
+                {step.description}
+              </p>
             </div>
           ))}
         </div>

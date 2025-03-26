@@ -53,18 +53,18 @@ const Meteors = ({ number = 10, className }) => {
 
 const Services = () => {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden font-sans py-12">
-      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 text-white relative inline-block">
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 relative overflow-hidden  py-12">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-center mb-6 sm:mb-8 lg:mb-10 text-black relative inline-block">
         Exceptional Services We Offer
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl text-center">
         {servicesData.map((service, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
-            whileHover={{ scale: 1.05, backgroundColor: "#1f2937", color: "#fff" }}
+            whileHover={{ backgroundColor: "#1f2937", color: "#fff" }}
             className="relative bg-gray-800 text-white shadow-lg rounded-lg p-4 sm:p-6 lg:p-8 transform transition-all duration-300 border border-gray-700 hover:shadow-2xl hover:border-blue-500 font-sans overflow-hidden"
           >
             <Meteors number={3} className="opacity-20" />
