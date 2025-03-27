@@ -16,6 +16,7 @@ interface ProductSectionProps {
   items: string[];
   imgSrc: string;
   bgColor: string;
+  textColor: string;
   icon: ReactNode;
   reverse?: boolean;
 }
@@ -25,6 +26,7 @@ const ProductSection: React.FC<ProductSectionProps> = ({
   items,
   imgSrc,
   bgColor,
+  textColor,
   icon,
   reverse = false,
 }) => {
@@ -44,14 +46,14 @@ const ProductSection: React.FC<ProductSectionProps> = ({
 
       <div className="w-full lg:w-1/2 flex flex-col justify-center">
         <div className="flex items-center gap-4">
-          <span className="text-4xl text-gray-500">{icon}</span>
-          <h3 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-500">
+          <span className={`text-4xl ${textColor}`}>{icon}</span>
+          <h3 className={`text-3xl md:text-4xl lg:text-5xl font-bold ${textColor}`}>
             {title}
           </h3>
         </div>
-        <ul className="list-disc pl-5 text-gray-700 text-lg md:text-xl lg:text-2xl space-y-2 mt-4">
+        <ul className={`list-disc pl-5 text-lg md:text-xl lg:text-2xl space-y-2 mt-4 ${textColor}`}>
           {items.map((item, index) => (
-            <li key={index} className="text-gray-500">{item}</li>
+            <li key={index} className="">{item}</li>
           ))}
         </ul>
       </div>
@@ -85,6 +87,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={ffeImg.src}
         bgColor="bg-[#111828]"
+        textColor="text-white"
         icon={<FaIndustry />}
       />
 
@@ -107,6 +110,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={verticalImg.src}
         bgColor="bg-[#fff]"
+        textColor="text-black"
         icon={<FaCogs />}
         reverse
       />
@@ -125,6 +129,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={interImg.src}
         bgColor="bg-[#111828]"
+        textColor="text-white"
         icon={<FaBoxes />}
       />
 
@@ -142,6 +147,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={p4.src}
         bgColor="bg-[#fff]"
+        textColor="text-black"
         icon={<FaCubes />}
         reverse
       />
@@ -168,6 +174,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={p5.src}
         bgColor="bg-[#111828]"
+        textColor="text-white"
         icon={<FaBoxes />}
       />
 
@@ -180,6 +187,7 @@ const Products: React.FC = () => {
         ]}
         imgSrc={p6.src}
         bgColor="bg-[#fff]"
+        textColor="text-black"
         icon={<FaCubes />}
         reverse
       />
