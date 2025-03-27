@@ -57,27 +57,6 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-              {/* <div>
-                <h2 className="mb-6 text-2xl font-semibold text-gray-900 uppercase dark:text-white">
-                  Product
-                </h2>
-                <ul className="text-gray-500 text-xl dark:text-gray-400 font-medium">
-                  <li className="mb-4">
-                    <Link
-                      href="https://github.com/drjvtlkr"
-                      className="hover:underline ">
-                      Github
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href="https://discord.gg/4eeurUVvTy"
-                      className="hover:underline">
-                      Dandiya
-                    </Link>
-                  </li>
-                </ul>
-              </div> */}
               <div>
                 <h2 className="mb-6 text-2xl font-semibold text-white uppercase dark:text-white">
                   Social Media
@@ -121,9 +100,9 @@ const Footer = () => {
               . All Rights Reserved.
             </span>
             <span className="text-white">
-              Made with ❤️, by{" "}
+              Created by{" "}
               <Link href="https://docyard.co.in" className="underline" target="_blank">
-                Docyard HQ
+                Docyard
               </Link>
             </span>
           </div>

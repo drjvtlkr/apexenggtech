@@ -297,7 +297,8 @@ const About = () => {
 
       <section className="flex justify-center p-8 bg-gray-50">
         <Link href="/#contactus">
-          <Button className="bg-[#1d8cc5] w-52 h-12 text-4xl hover:bg-orange-300 hover:text-black">
+          <Button 
+          className="px-8 py-4 bg-blue-600 text-white w-52 h-12 text-4xl font-semibold rounded-lg shadow-lg hover:bg-blue-700 transition">
             Contact us
           </Button>
         </Link>
