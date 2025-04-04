@@ -1,5 +1,4 @@
 import React from "react";
-// import apexenggtechLogo from "@/images/apexenggtech.png";
 import Carousel from "@/components/Carousel";
 import Services from "@/components/Services";
 import aboutImg from "../images/epc_banner3.jpg";
@@ -9,8 +8,6 @@ import Image from "next/image";
 import Button from "@/components/Buttons/Button";
 import MissionVisionCard from "@/components/MissionVisionCard";
 import { ProductCarousel } from "@/components/ProductCarousel";
-// import { CustomerJourney } from "@/components/CustomerJourney";
-// import { AnimatedTestimonialsDemo } from "@/components/animated-testimonials-demo";
 import CustomerJourney1 from "@/components/CustomerJourney1";
 import ContactForm from "@/components/ContactUs";
 const Home = () => {

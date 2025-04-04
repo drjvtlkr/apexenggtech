@@ -38,6 +38,8 @@ export default function ContactForm() {
   function onSubmit(values: z.infer<typeof formSchema>) {
     send(values);
     console.log(values);
+    alert("Form submitted Successfully, We will get in touch with you ASAP🥳🥳")
+    form.reset();
   }
 
   return (
