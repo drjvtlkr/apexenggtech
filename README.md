@@ -14,7 +14,8 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+You are currently seeing the dev branch, you are a developer !!
+
 ## Deployed on Vercel
 
-This is the Production branch(main) [Abhisehk Engineering Works](https://abhishengg.com/)
-This is different from the domain assigned in [dev](https://apexenggtech.vercel.app).
+Check out our progress [Abhishek Engg Works](https://apexenggtech.vercel.app). We assigned dev branch to this vercel domain, such that the domain [abhishengg](https://abhishengg.com) will only have production approved code. All of this wouldn't have been possibel without [Vercel](https://vercel.com).
