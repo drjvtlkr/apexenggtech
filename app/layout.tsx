@@ -23,7 +23,7 @@ const smooch = Smooch_Sans({
 
 export const metadata: Metadata = {
   title: "Abhishek Engg Works",
-  description: "One stop Solution",
+  description: "One stop Solution, for your sugarcane industry",
 };
 
 export default function RootLayout({
